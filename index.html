@@ -90,10 +90,16 @@
       color:var(--white);
     }
     .brand-mini{display:flex;align-items:center;gap:10px;font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.02em;font-size:1.05rem;color:var(--gold-3)}
-    .brand-mark{width:30px;height:30px;border-radius:50%;border:1px solid rgba(229,192,107,.6);display:grid;place-items:center;position:relative;background:rgba(229,192,107,.08)}
-    .brand-mark:before,.brand-mark:after{content:"";position:absolute;width:2px;height:17px;border-radius:10px;background:linear-gradient(var(--gold-3),var(--gold));top:6px}
-    .brand-mark:before{transform:rotate(28deg)}
-    .brand-mark:after{transform:rotate(-28deg)}
+.brand-mark-img{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  border-radius:50%;
+  border:1px solid rgba(229,192,107,.55);
+  padding:4px;
+  background:rgba(229,192,107,.08);
+}
+
     .nav-links{display:flex;align-items:center;gap:20px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
     .nav-links a{transition:.25s ease}
     .nav-links a:hover{color:var(--gold-3)}
@@ -317,7 +323,8 @@
 
     <nav class="nav" aria-label="Navegación principal">
       <a class="brand-mini" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark-img" src="brand-mark.png" alt="" aria-hidden="true">
+
         Tu Código Evolutivo
       </a>
       <div class="nav-links" aria-hidden="false">
