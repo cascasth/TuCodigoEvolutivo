@@ -258,7 +258,8 @@
     .speakers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
     .speaker-card{border:1px solid rgba(229,192,107,.22);border-radius:30px;background:rgba(255,255,255,.055);backdrop-filter:blur(12px);padding:28px;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;transition:.3s ease}
     .speaker-card:hover{transform:translateY(-7px);background:rgba(255,255,255,.082)}
-    .speaker-avatar{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:var(--navy);font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:700;margin-bottom:20px;box-shadow:0 16px 45px rgba(201,149,44,.24)}
+    .speaker-avatar{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:var(--navy);font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:700;margin-bottom:20px;box-shadow:0 16px 45px rgba(201,149,44,.24);overflow:hidden;}
+.speaker-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
     .speaker-card h3{font-family:"Cormorant Garamond",serif;color:var(--white);font-size:1.75rem;line-height:1.04;margin-bottom:8px}
     .speaker-meta{color:var(--gold-3);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;margin-bottom:18px}
     .speaker-card p{color:rgba(255,255,255,.65);font-weight:300;font-size:.94rem}
@@ -507,7 +508,7 @@
           <div class="speakers-grid">
             <article class="speaker-card reveal">
               <div>
-                <div class="speaker-avatar">LA</div>
+                <div class="speaker-avatar"><img src="aimee.jpg" alt="Luisa Aimée Flores Barbará"></div>
                 <h3>Luisa Aimée Flores Barbará</h3>
                 <p class="speaker-meta">Bioevolutiva Consciente · Numerología en el árbol familiar</p>
                 <p style="font-style: italic; margin-bottom: 1.2rem;">Mi cuerpo me habló con un síntoma que apagó mi voz… para que por fin pudiera escucharme y expresarme desde mi verdad.<br>Hoy uso mi voz para enseñarte a resignificar esos mensajes y a sanar.<br>Porque curar es temporal; sanar, para siempre.</p>
@@ -517,7 +518,7 @@
             </article>
             <article class="speaker-card reveal">
               <div>
-                <div class="speaker-avatar">ZR</div>
+                <div class="speaker-avatar"><img src="zuly.jpg" alt="Zuly Astrid Román Salazar"></div>
                 <h3>Zuly Astrid Román Salazar</h3>
                 <p class="speaker-meta">Constelaciones familiares · Sanación sistémica</p>
                 <p>Llevo más de 20 años acompañando procesos de transformación, pero mi camino no comenzó en un aula, comenzó con el dolor más profundo que puede vivir una madre. Esa experiencia me enseñó que los sistemas familiares guardan memorias que el cuerpo y el alma cargan, aunque nadie hable de ellas. Hoy acompaño a otros a ver lo que el sistema ha callado.</p>
@@ -526,7 +527,7 @@
             </article>
             <article class="speaker-card reveal">
               <div>
-                <div class="speaker-avatar">PF</div>
+                <div class="speaker-avatar"><img src="pilar.jpg" alt="Pilar Fernández García"></div>
                 <h3>Pilar Fernández García</h3>
                 <p class="speaker-meta">Numerología evolutiva · Creadora del sistema</p>
                 <p>Durante 21 años me pregunté por qué ciertas situaciones se repetían en mi vida sin importar cuánto lo intentaba. La respuesta estaba en los números, no como magia, sino como un mapa simbólico de quién soy y qué vine a aprender. Desarrollé mi propio sistema de Numerología Evolutiva y desde entonces acompaño a miles de personas a descifrar el suyo.</p>
