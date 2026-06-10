@@ -8,7 +8,21 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
-    :root{
+    :root{  <section class="final-cta" id="registro">
+        <div class="container">
+          <div class="final-card reveal">
+            <p class="kicker">Fechas y registro</p>
+            <h2>La gira está por <em>abrirse</em>.</h2>
+            <p>Déjanos tu correo para recibir el anuncio de fechas, sedes confirmadas, programa completo y apertura de registro antes que el público general.</p>
+            <form class="interest-box" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Solicitud registrada'; this.querySelector('button').disabled=true;">
+              <label class="sr-only" for="email">Correo electrónico</label>
+              <input id="email" type="email" placeholder="tu@email.com" required />
+              <button class="btn-primary" type="submit">Entrar a la lista</button>
+            </form>
+            
+          </div>
+        </div>
+      </section>
       --navy:#152b72;
       --navy-900:#07133e;
       --navy-800:#0c1d58;
@@ -342,7 +356,8 @@
         <a href="#guias">Ponentes</a>
         <a href="#sedes">Sedes</a>
       </div>
-      <a class="nav-cta" href="#registro">Lista de espera</a>
+      <a href="#sedes" class="nav-links" style="color:rgba(255,255,255,.72);">Fechas</a>
+<a class="nav-cta" href="https://www.instagram.com/tu.codigoevolutivo/" target="_blank">Síguenos</a>
     </nav>
 
     <header class="hero" id="inicio">
@@ -517,20 +532,18 @@ Haciendo de mentes rígidas mentes flexibles  desde el amor
       </section>
 
       <section class="final-cta" id="registro">
-        <div class="container">
-          <div class="final-card reveal">
-            <p class="kicker">Fechas y registro</p>
-            <h2>La gira está por <em>abrirse</em>.</h2>
-            <p>Déjanos tu correo para recibir el anuncio de fechas, sedes confirmadas, programa completo y apertura de registro antes que el público general.</p>
-            <form class="interest-box" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Solicitud registrada'; this.querySelector('button').disabled=true;">
-              <label class="sr-only" for="email">Correo electrónico</label>
-              <input id="email" type="email" placeholder="tu@email.com" required />
-              <button class="btn-primary" type="submit">Entrar a la lista</button>
-            </form>
-            
-          </div>
-        </div>
-      </section>
+  <div class="container">
+    <div class="final-card reveal">
+      <p class="kicker">Próximas fechas</p>
+      <h2>La gira está por <em>abrirse</em>.</h2>
+      <p>Sigue nuestras redes para ser el primero en enterarte de fechas, sedes y apertura de registro.</p>
+      <div class="interest-box">
+        <a class="btn-primary" href="https://www.instagram.com/tu.codigoevolutivo/" target="_blank">Síguenos en Instagram</a>
+        <a class="btn-secondary" href="https://www.facebook.com/profile.php?id=61590513938655" target="_blank">Síguenos en Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
 
     <footer>
