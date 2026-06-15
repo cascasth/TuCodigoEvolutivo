@@ -274,9 +274,25 @@
     .map-panel:before{content:"";position:absolute;inset:42px;border-radius:50%;border:1px solid rgba(201,149,44,.20)}
     .map-panel:after{content:"";position:absolute;inset:88px;border-radius:50%;border:1px dashed rgba(201,149,44,.22)}
     .mexico-word{position:absolute;left:34px;bottom:28px;font-family:"Cormorant Garamond",serif;font-size:5.8rem;line-height:.8;color:rgba(21,43,114,.08);font-weight:700;letter-spacing:-.06em}
-    .city-dot{position:absolute;display:flex;align-items:center;gap:8px;color:var(--navy);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .city-dot{
+  position:absolute;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--navy);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  background:rgba(255,255,255,.72);
+  padding:6px 10px;
+  border-radius:999px;
+  box-shadow:0 8px 20px rgba(21,43,114,.06);
+}
     .city-dot:before{content:"";width:13px;height:13px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(201,149,44,.13),0 0 30px rgba(201,149,44,.42)}
-    .edomex{left:48%;top:42%}.gdl{left:28%;top:47%}.mty{left:48%;top:23%}.puebla{left:58%;top:50%}.cancun{right:10%;top:55%}.more{left:35%;bottom:20%}
+    .edomex{left:47%;top:42%}
+.puebla{left:58%;top:50%}
+.teotihuacan{left:8%;top:8%}
     .city-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .city-item{background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center;box-shadow:0 16px 40px rgba(21,43,114,.06)}
     .city-item b{font-family:"Cormorant Garamond",serif;color:var(--navy);font-size:1.18rem;line-height:1}
