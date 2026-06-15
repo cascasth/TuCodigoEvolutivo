@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tu Código Evolutivo: gira de talleres y conferencias en México sobre Código sistémico, Bioevolutiva Consciente y Numerología evolutiva." />
+  <title>Tu Código Evolutivo | Gira México</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root{
+      --navy:#152b72;
+      --navy-900:#07133e;
+      --navy-800:#0c1d58;
+      --navy-700:#122866;
+      --blue-soft:#263f91;
+      --gold:#c9952c;
+      --gold-2:#e5c06b;
+      --gold-3:#fff1c8;
+      --cream:#fbf7ee;
+      --cream-2:#f2eadb;
+      --sand:#dfd0b7;
+      --ink:#101a3d;
+      --muted:#68749c;
+      --white:#ffffff;
+      --line:rgba(201,149,44,.22);
+      --shadow:0 30px 80px rgba(7,19,62,.18);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 5%, rgba(229,192,107,.18), transparent 26rem),
+        radial-gradient(circle at 80% 18%, rgba(21,43,114,.11), transparent 30rem),
+        var(--cream);
+      color:var(--ink);
+      overflow-x:hidden;
+      line-height:1.65;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    .page-shell{position:relative;min-height:100vh;overflow:hidden}
+    .page-shell:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.36;
+      background-image:
+        linear-gradient(rgba(21,43,114,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(21,43,114,.045) 1px, transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(to bottom, transparent, #000 12%, #000 78%, transparent);
+      z-index:-3;
+    }
+    .cosmic-orb{
+      position:absolute;
+      border:1px solid rgba(201,149,44,.16);
+      border-radius:999px;
+      pointer-events:none;
+      z-index:0;
+    }
+    .orb-1{width:56rem;height:56rem;right:-24rem;top:-18rem}
+    .orb-2{width:32rem;height:32rem;left:-14rem;top:42rem}
+    .orb-3{width:42rem;height:42rem;right:-18rem;bottom:20rem}
+
+    .container{width:min(1140px, calc(100% - 40px));margin:0 auto;position:relative;z-index:1}
+    .nav{
+      position:fixed;
+      top:18px;
+      left:50%;
+      transform:translateX(-50%);
+      width:min(1120px, calc(100% - 32px));
+      z-index:50;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:12px 14px 12px 18px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:999px;
+      background:rgba(7,19,62,.55);
+      backdrop-filter:blur(18px);
+      box-shadow:0 18px 45px rgba(7,19,62,.24);
+      color:var(--white);
+    }
+    .brand-mini{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-family:"Cormorant Garamond",serif;
+      font-weight:700;
+      letter-spacing:.02em;
+      font-size:1.05rem;
+      color:var(--gold-3)
+    }
+.brand-mark-img{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  border-radius:50%;
+  border:1px solid rgba(229,192,107,.55);
+  padding:4px;
+  background:rgba(229,192,107,.08);
+}
+
+    .nav-links{display:flex;align-items:center;gap:20px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+    .nav-links a{transition:.25s ease}
+    .nav-links a:hover{color:var(--gold-3)}
+    .nav-cta,.btn-primary,.btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+      font-size:.76rem;
+      transition:.25s ease;
+      white-space:nowrap;
+    }
+    .nav-cta{padding:10px 15px;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:var(--navy-900);box-shadow:0 10px 24px rgba(201,149,44,.25)}
+    .nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(201,149,44,.34)}
+
+    .hero{
+      min-height:100vh;
+      padding:132px 0 72px;
+      color:var(--white);
+      position:relative;
+      background:
+        radial-gradient(circle at 68% 42%, rgba(229,192,107,.22), transparent 21rem),
+        radial-gradient(circle at 5% 16%, rgba(255,255,255,.10), transparent 19rem),
+        linear-gradient(135deg,var(--navy-900) 0%, var(--navy) 48%, #0b1b54 100%);
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        linear-gradient(115deg, transparent 0 45%, rgba(255,255,255,.045) 45% 46%, transparent 46% 100%),
+        radial-gradient(circle at 50% 50%, transparent 0 17rem, rgba(201,149,44,.08) 17.1rem 17.16rem, transparent 17.22rem),
+        radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(201,149,44,.06) 24.1rem 24.16rem, transparent 24.22rem);
+      opacity:.72;
+    }
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.88fr);gap:52px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold-3);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:22px}
+    .eyebrow:before,.eyebrow:after{content:"";width:28px;height:1px;background:rgba(229,192,107,.62)}
+    .hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(4.1rem, 8.4vw, 8.7rem);line-height:.82;font-weight:600;letter-spacing:-.055em;margin-bottom:25px;text-wrap:balance}
+    .hero h1 span{display:block;font-style:italic;font-weight:400;color:var(--gold-3);font-size:.42em;letter-spacing:.01em;margin-bottom:.12em}
+    .hero-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(1.42rem,2.6vw,2.15rem);line-height:1.22;max-width:780px;color:rgba(255,255,255,.86);margin-bottom:22px;text-wrap:balance}
+    .hero-lead strong{color:var(--gold-3);font-weight:600}
+    .hero-copy{max-width:670px;color:rgba(255,255,255,.68);font-size:1rem;font-weight:300;margin-bottom:30px}
+    .hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:30px}
+    .btn-primary{padding:15px 22px;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:var(--navy-900);box-shadow:0 20px 45px rgba(201,149,44,.28)}
+    .btn-secondary{padding:14px 20px;border:1px solid rgba(229,192,107,.34);color:var(--gold-3);background:rgba(255,255,255,.045)}
+    .btn-secondary:hover{background:rgba(255,255,255,.10);transform:translateY(-2px)}
+    .hero-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:720px}
+    .meta-card{border:1px solid rgba(229,192,107,.22);background:rgba(255,255,255,.055);border-radius:18px;padding:15px 14px;backdrop-filter:blur(8px)}
+    .meta-card b{display:block;font-family:"Cormorant Garamond",serif;color:var(--gold-3);font-size:2.35rem;line-height:.9;margin-bottom:9px;font-weight:700}
+    .meta-card span{display:block;color:rgba(255,255,255,.64);font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;line-height:1.45}
+
+    .emblem-stage{position:relative;min-height:560px;display:grid;place-items:center;padding-inline:44px}
+    .emblem-stage:before,.emblem-stage:after{content:"";position:absolute;left:50%;top:50%;border-radius:50%;aspect-ratio:1 / 1;transform:translate(-50%,-50%);pointer-events:none}
+    .emblem-stage:before{width:clamp(390px,42vw,520px);border:1px dashed rgba(229,192,107,.18);animation:spin-center 36s linear infinite}
+    .emblem-stage:after{width:clamp(310px,34vw,420px);border:1px solid rgba(229,192,107,.18);animation:spin-center-reverse 54s linear infinite}
+    .logo-card{
+      width:min(425px, 92vw);
+      aspect-ratio:1;
+      border-radius:50%;
+      position:relative;
+      display:grid;
+      place-items:center;
+      padding:22px;
+      background:radial-gradient(circle, rgba(255,247,230,.12), rgba(255,247,230,.02) 58%, rgba(201,149,44,.08));
+      box-shadow:0 36px 100px rgba(0,0,0,.28), inset 0 0 0 1px rgba(229,192,107,.20);
+      animation:float 6s ease-in-out infinite;
+    }
+    .logo-card img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(0,0,0,.18)) saturate(1.05)}
+    .floating-note{position:absolute;min-width:176px;max-width:210px;border:1px solid rgba(229,192,107,.28);background:rgba(7,19,62,.62);backdrop-filter:blur(14px);border-radius:22px;padding:14px 16px;color:rgba(255,255,255,.74);font-size:.8rem;line-height:1.4;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+    .floating-note b{display:block;color:var(--gold-3);font-family:"Cormorant Garamond",serif;font-size:1.3rem;line-height:1.05;margin-bottom:4px}
+    .note-1{left:-26px;top:62px}
+    .note-2{right:-34px;bottom:130px}
+    .note-3{left:28px;bottom:34px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes spin-center{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+    @keyframes spin-center-reverse{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+    .section{padding:96px 0;position:relative}
+    .section-navy{background:linear-gradient(135deg,var(--navy-900),var(--navy));color:var(--white);overflow:hidden}
+    .section-navy:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%, rgba(229,192,107,.13), transparent 25rem), radial-gradient(circle at 12% 86%, rgba(255,255,255,.07), transparent 24rem)}
+    .section-cream{background:linear-gradient(180deg,var(--cream),#fffdf8)}
+    .section-title{max-width:860px;margin-bottom:44px}
+    .kicker{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:12px}
+    .section-navy .kicker{color:var(--gold-3)}
+    .title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.45rem,4.8vw,5rem);line-height:.92;font-weight:600;letter-spacing:-.04em;color:var(--navy)}
+    .section-navy .title{color:var(--white)}
+    .subtitle{font-size:1.03rem;max-width:720px;color:var(--muted);margin-top:18px;font-weight:300}
+    .section-navy .subtitle{color:rgba(255,255,255,.66)}
+    .gold-rule{width:72px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-top:20px}
+
+    .manifest-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:36px;align-items:stretch}
+    .quote-card{border-radius:var(--radius);background:var(--navy);color:var(--white);padding:38px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .quote-card:before{content:"“";position:absolute;right:20px;top:-24px;font-family:"Cormorant Garamond",serif;font-size:10rem;color:rgba(229,192,107,.17);line-height:1}
+    .quote-card p{font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1.08;color:var(--gold-3);position:relative;z-index:1}
+    .quote-card small{display:block;margin-top:24px;color:rgba(255,255,255,.58);letter-spacing:.13em;text-transform:uppercase;font-size:.72rem}
+    .manifest-copy{border:1px solid var(--line);border-radius:var(--radius);padding:38px;background:rgba(255,255,255,.62);box-shadow:0 24px 70px rgba(21,43,114,.08)}
+    .manifest-copy p{color:#34416c;margin-bottom:18px;font-size:1.02rem;font-weight:300}
+    .manifest-copy p:last-child{margin-bottom:0}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .soft-pill{border:1px solid rgba(201,149,44,.25);background:rgba(255,241,200,.55);color:var(--navy);border-radius:999px;padding:9px 13px;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+    .pain-layout{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;position:relative;z-index:1}
+    .pain-card{grid-column:span 4;min-height:172px;padding:24px;border:1px solid rgba(229,192,107,.22);border-radius:24px;background:rgba(255,255,255,.055);backdrop-filter:blur(10px);transition:.3s ease;position:relative;overflow:hidden}
+    .pain-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(229,192,107,.10),transparent 58%);opacity:0;transition:.3s ease}
+    .pain-card:hover{transform:translateY(-7px);border-color:rgba(229,192,107,.45);background:rgba(255,255,255,.085)}
+    .pain-card:hover:before{opacity:1}
+    .pain-card .num{font-family:"Cormorant Garamond",serif;color:var(--gold-3);font-size:1.9rem;line-height:1;margin-bottom:12px;display:block;position:relative;z-index:1}
+    .pain-card p{color:rgba(255,255,255,.76);font-weight:300;position:relative;z-index:1}
+
+    .codes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .code-card{background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:0 24px 70px rgba(21,43,114,.08);position:relative;overflow:hidden;min-height:440px;display:flex;flex-direction:column;justify-content:space-between;transition:.3s ease}
+    .code-card:hover{transform:translateY(-8px);box-shadow:0 34px 90px rgba(21,43,114,.14)}
+    .code-card:before{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(201,149,44,.16);border-radius:50%;right:-84px;top:-84px}
+    .code-icon{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--navy-800));color:var(--gold-3);box-shadow:0 18px 42px rgba(21,43,114,.24);margin-bottom:28px;position:relative}
+    .code-icon svg{width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:1.35}
+    .code-card h3{font-family:"Cormorant Garamond",serif;color:var(--navy);font-size:2.05rem;line-height:1;margin-bottom:14px;letter-spacing:-.02em}
+    .code-card p{color:#455173;font-weight:300;margin-bottom:22px}
+    .code-tag{align-self:flex-start;border:1px solid rgba(201,149,44,.32);border-radius:999px;padding:8px 11px;color:var(--gold);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;background:rgba(255,241,200,.45)}
+
+    .method-wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:center;position:relative;z-index:1}
+    .method-visual{min-height:520px;border:1px solid rgba(229,192,107,.20);border-radius:36px;background:rgba(255,255,255,.045);position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
+    .method-visual:before{content:"";position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(229,192,107,.22)}
+    .method-visual:after{content:"";position:absolute;inset:19%;border-radius:50%;border:1px dashed rgba(229,192,107,.26);animation:spin 44s linear infinite}
+    .center-sigil{position:absolute;inset:50%;transform:translate(-50%,-50%);width:156px;height:156px;border-radius:50%;background:radial-gradient(circle,var(--gold-3),var(--gold));display:grid;place-items:center;color:var(--navy);font-family:"Cormorant Garamond",serif;font-size:4rem;font-weight:700;box-shadow:0 0 70px rgba(229,192,107,.28)}
+    .orbit-item{position:absolute;width:138px;height:138px;border-radius:50%;background:rgba(7,19,62,.58);border:1px solid rgba(229,192,107,.30);display:grid;place-items:center;text-align:center;padding:18px;color:rgba(255,255,255,.78);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;backdrop-filter:blur(10px)}
+    .orbit-item b{display:block;font-family:"Cormorant Garamond",serif;color:var(--gold-3);font-size:1.24rem;letter-spacing:0;text-transform:none;margin-bottom:4px}
+    .orbit-a{left:8%;top:12%}.orbit-b{right:8%;top:32%}.orbit-c{left:16%;bottom:11%}
+    .step-list{display:grid;gap:16px}
+    .step{display:grid;grid-template-columns:62px 1fr;gap:18px;padding:22px;border:1px solid rgba(229,192,107,.22);border-radius:24px;background:rgba(255,255,255,.055);backdrop-filter:blur(12px)}
+    .step-number{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:rgba(229,192,107,.12);border:1px solid rgba(229,192,107,.3);font-family:"Cormorant Garamond",serif;color:var(--gold-3);font-size:1.5rem;font-weight:700}
+    .step h3{font-family:"Cormorant Garamond",serif;font-size:1.55rem;line-height:1.05;color:var(--white);margin-bottom:6px}
+    .step p{color:rgba(255,255,255,.65);font-weight:300;font-size:.96rem}
+
+    .experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .experience-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 22px 60px rgba(21,43,114,.075)}
+    .experience-card.wide{grid-column:1 / -1;display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:center;background:linear-gradient(135deg,#fff,var(--cream-2))}
+    .experience-label{color:var(--gold);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-bottom:10px}
+    .experience-card h3{font-family:"Cormorant Garamond",serif;color:var(--navy);font-size:1.8rem;line-height:1.05;margin-bottom:10px}
+    .experience-card p{color:#4a5578;font-weight:300}
+    .mini-agenda{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .agenda-chip{padding:16px;border-radius:18px;background:rgba(21,43,114,.06);border:1px solid rgba(21,43,114,.08);color:var(--navy);font-weight:700;font-size:.82rem}
+    .agenda-chip span{display:block;font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:1.45rem;line-height:1;margin-bottom:5px}
+
+    .speakers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
+    .speaker-card{border:1px solid rgba(229,192,107,.22);border-radius:30px;background:rgba(255,255,255,.055);backdrop-filter:blur(12px);padding:28px;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;transition:.3s ease}
+    .speaker-card:hover{transform:translateY(-7px);background:rgba(255,255,255,.082)}
+    .speaker-avatar{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-3),var(--gold));color:var(--navy);font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:700;margin-bottom:20px;box-shadow:0 16px 45px rgba(201,149,44,.24);overflow:hidden;}
+.speaker-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+    .speaker-card h3{font-family:"Cormorant Garamond",serif;color:var(--white);font-size:1.75rem;line-height:1.04;margin-bottom:8px}
+    .speaker-meta{color:var(--gold-3);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;margin-bottom:18px}
+    .speaker-card p{color:rgba(255,255,255,.65);font-weight:300;font-size:.94rem}
+    .speaker-origin{margin-top:20px;color:rgba(255,255,255,.42);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+
+    .cities-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}
+    .map-panel{border:1px solid var(--line);border-radius:36px;background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(255,255,255,.52));padding:32px;box-shadow:0 24px 70px rgba(21,43,114,.08);min-height:460px;position:relative;overflow:hidden}
+    .map-panel:before{content:"";position:absolute;inset:42px;border-radius:50%;border:1px solid rgba(201,149,44,.20)}
+    .map-panel:after{content:"";position:absolute;inset:88px;border-radius:50%;border:1px dashed rgba(201,149,44,.22)}
+    .mexico-word{position:absolute;left:34px;bottom:28px;font-family:"Cormorant Garamond",serif;font-size:5.8rem;line-height:.8;color:rgba(21,43,114,.08);font-weight:700;letter-spacing:-.06em}
+    .city-dot{
+      position:absolute;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:var(--navy);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      background:rgba(255,255,255,.78);
+      padding:7px 11px;
+      border-radius:999px;
+      box-shadow:0 8px 20px rgba(21,43,114,.07);
+      white-space:nowrap;
+      transform:translate(-50%, -50%);
+      z-index:2;
+    }
+    .city-dot:before{content:"";width:13px;height:13px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(201,149,44,.13),0 0 30px rgba(201,149,44,.42)}
+    .edomex{left:49%;top:43%}
+    .puebla{left:61%;top:51%}
+    .teotihuacan{left:42%;top:34%}
+    .city-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .city-item{background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center;box-shadow:0 16px 40px rgba(21,43,114,.06)}
+    .city-item b{font-family:"Cormorant Garamond",serif;color:var(--navy);font-size:1.18rem;line-height:1}
+    .city-item span{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800}
+
+    .final-cta{padding:110px 0;background:linear-gradient(135deg,var(--navy-900),var(--navy));color:var(--white);position:relative;overflow:hidden;text-align:center}
+    .final-cta:before{content:"";position:absolute;inset:auto auto -30% 50%;transform:translateX(-50%);width:70rem;height:70rem;border-radius:50%;border:1px solid rgba(229,192,107,.16);box-shadow:inset 0 0 0 58px rgba(229,192,107,.025)}
+    .final-card{position:relative;z-index:1;max-width:880px;margin:0 auto;border:1px solid rgba(229,192,107,.25);border-radius:40px;background:rgba(255,255,255,.055);backdrop-filter:blur(16px);padding:54px 42px;box-shadow:0 34px 90px rgba(0,0,0,.18)}
+    .final-card h2{font-family:"Cormorant Garamond",serif;font-size:clamp(3rem,6vw,6.2rem);line-height:.85;letter-spacing:-.05em;margin-bottom:22px}
+    .final-card h2 em{color:var(--gold-3);font-style:italic;font-weight:400}
+    .final-card p{max-width:660px;margin:0 auto 28px;color:rgba(255,255,255,.72);font-weight:300;font-size:1.03rem}
+    .interest-box{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+    .interest-box input{width:min(390px,100%);border:1px solid rgba(229,192,107,.28);border-radius:999px;background:rgba(255,255,255,.08);padding:16px 18px;color:#fff;outline:none;font:inherit}
+    .interest-box input::placeholder{color:rgba(255,255,255,.44)}
+    .interest-box button{border:0;cursor:pointer}
+    .micro-note{font-size:.78rem!important;color:rgba(255,255,255,.42)!important;margin-top:18px!important;margin-bottom:0!important}
+
+    footer{background:#050d2c;color:rgba(255,255,255,.48);padding:34px 0;text-align:center}
+    .footer-brand{font-family:"Cormorant Garamond",serif;color:var(--gold-3);font-size:1.38rem;font-weight:700;margin-bottom:6px}
+    .footer-links{display:flex;justify-content:center;gap:22px;margin-top:16px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+    .footer-links a{color:rgba(255,255,255,.46)}
+    .footer-links a:hover{color:var(--gold-3)}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease, transform .75s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @media (max-width:980px){
+      .nav-links{display:none}
+      .hero{padding-top:118px}
+      .hero-grid,.manifest-grid,.method-wrap,.cities-wrap{grid-template-columns:1fr;gap:34px}
+      .hero h1{font-size:clamp(4rem,14vw,7rem)}
+      .emblem-stage{min-height:490px;order:-1}
+      .hero-meta,.codes-grid,.speakers-grid{grid-template-columns:1fr}
+      .pain-card{grid-column:span 6}
+      .code-card{min-height:auto}
+      .experience-card.wide{grid-template-columns:1fr}
+    }
+    @media (max-width:700px){
+      .container{width:min(100% - 28px, 1140px)}
+      .nav{top:10px;width:calc(100% - 18px);border-radius:24px}.nav-cta{display:none}.brand-mini{font-size:.94rem}
+      .hero{padding:104px 0 54px;min-height:auto}.hero-grid{gap:18px}
+      .hero-lead{font-size:1.42rem}.hero-copy{font-size:.95rem}
+      .hero-actions{align-items:stretch}.btn-primary,.btn-secondary{width:100%;padding:14px 16px}
+      .hero-meta{grid-template-columns:1fr}.meta-card{padding:13px}
+      .emblem-stage{min-height:360px;padding-inline:0}.logo-card{width:min(310px,90vw)}.emblem-stage:before{width:min(315px,86vw)}.emblem-stage:after{width:min(245px,70vw)}
+      .floating-note{display:none}.section{padding:70px 0}.title{font-size:2.75rem}.quote-card,.manifest-copy,.final-card{padding:28px;border-radius:26px}.quote-card p{font-size:1.62rem}
+      .pain-card{grid-column:1 / -1;min-height:auto}.codes-grid,.experience-grid,.speakers-grid,.city-list,.mini-agenda{grid-template-columns:1fr}
+      .method-visual{min-height:390px;border-radius:26px}.center-sigil{width:115px;height:115px;font-size:3rem}.orbit-item{width:104px;height:104px;font-size:.62rem}.orbit-a{left:4%;top:10%}.orbit-b{right:4%;top:36%}.orbit-c{left:11%;bottom:9%}
+      .step{grid-template-columns:1fr}.step-number{width:52px;height:52px}.map-panel{min-height:370px;padding:22px}.mexico-word{font-size:3.8rem}.city-dot{font-size:.64rem;padding:6px 9px}.edomex{left:50%;top:43%}.puebla{left:62%;top:53%}.teotihuacan{left:42%;top:32%}.final-cta{padding:76px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="cosmic-orb orb-1"></div>
+    <div class="cosmic-orb orb-2"></div>
+    <div class="cosmic-orb orb-3"></div>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand-mini" href="#inicio" aria-label="Ir al inicio">
+        <img class="brand-mark-img" src="brand-mark.png" alt="" aria-hidden="true">
+
+        Tu Código Evolutivo
+      </a>
+      <div class="nav-links" aria-hidden="false">
+        <a href="#sistema">Sistema</a>
+        <a href="#guias">Ponentes</a>
+        <a href="#sedes">Sedes</a>
+        <a href="#registro">Fechas</a>
+      </div>
+      <a class="nav-cta" href="https://www.instagram.com/tu.codigoevolutivo/" target="_blank">Síguenos</a>
+    </nav>
+
+    <header class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copyblock reveal">
+          <p class="eyebrow">Gira México · talleres y conferencias</p>
+          <h1><span>Tu</span>Código Evolutivo</h1>
+          <p class="hero-lead">Un encuentro presencial para vivirlo con profundidad y claridad.</p>
+          <p class="hero-copy">Aquí la historia que heredaste, lo que repites y tu propósito se leen desde tres dimensiones: la familia, tu mapa energético y el cuerpo. Código Sistémico, Numerología Evolutiva y Bioevolutiva Consciente — una sola experiencia.</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#registro">Actividades</a>
+            <a class="btn-secondary" href="#sistema">Conocer el sistema</a>
+          </div>
+          <div class="hero-meta" aria-label="Datos destacados de la gira">
+            <div class="meta-card"><b>3</b><span>disciplinas integradas</span></div>
+            <div class="meta-card"><b>3</b><span>sedes en México</span></div>
+            <div class="meta-card"><b>3</b><span>fechas confirmadas</span></div>
+          </div>
+        </div>
+        <div class="emblem-stage reveal" aria-label="Emblema provisional de Tu Código Evolutivo">
+          <div class="floating-note note-1"><b>Linaje</b>Código Sistémico</div>
+          <div class="floating-note note-2"><b>Cuerpo</b>Bioevolutiva Consciente</div>
+          <div class="floating-note note-3"><b>Mapa</b>Numerología Evolutiva</div>
+          <div class="logo-card">
+            <img src="logo-codigo-evolutivo-transparente.png" alt="Emblema dorado con ADN, árbol, Genealogía y Numerología Evolutiva" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-cream" id="manifiesto">
+        <div class="container manifest-grid">
+          <div class="quote-card reveal">
+            <p>Tu vida no empezó contigo. Pero tu evolución sí puede empezar aquí.</p>
+            <small>Tu Código Evolutivo · Gira México 2026</small>
+          </div>
+          <div class="manifest-copy reveal">
+            <p>Hay decisiones, síntomas, vínculos y bloqueos que no se entienden del todo cuando se miran de manera aislada. A veces pertenecen a una historia más amplia: una lealtad familiar, una emoción no escuchada, una memoria del cuerpo o un patrón que se repite generación tras generación.</p>
+            <p><strong>Tu Código Evolutivo</strong> nace para unir tres lenguajes terapéuticos en una sola lectura profunda. No se trata de etiquetarte, sino de ayudarte a reconocer qué información dirige tu vida y qué posibilidades se abren cuando la haces consciente.</p>
+            <div class="pill-row">
+              <span class="soft-pill">Código Sistémico</span>
+              <span class="soft-pill">Bioevolutiva Consciente</span>
+              <span class="soft-pill">Numerología Evolutiva</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-navy" id="para-ti">
+        <div class="container">
+          <div class="section-title reveal">
+  <p class="kicker">¿Es para ti?</p>
+  <h2 class="title" style="font-size:clamp(1.9rem,3.5vw,3.4rem);">Hay quienes llegan con una pregunta. Hay quienes llegan con un mapa a medias. Los dos tienen un código esperando ser leído.</h2>
+  <p class="subtitle">Quizás no sabes exactamente qué es lo que buscas, solo sabes que algo se repite y ya no puedes ignorarlo. O quizás llevas años trabajando en ti y sientes que falta la pieza que une todo. En cualquiera de los dos casos, este espacio es para ti.</p>
+  <div class="gold-rule"></div>
+</div>
+<div class="pain-layout">
+  <article class="pain-card reveal"><span class="num">01</span><p><strong>Tu cuerpo te habla, pero nadie te enseñó su idioma.</strong><br>Vives ansiedad, cansancio, síntomas que la medicina ya descartó — y sabes que hay algo más detrás.</p></article>
+  <article class="pain-card reveal"><span class="num">02</span><p><strong>Los mismos vínculos, distintas caras.</strong><br>Repites relaciones emocionalmente ausentes, dinámicas de abandono o conexiones que drenan sin que puedas explicar por qué.</p></article>
+  <article class="pain-card reveal"><span class="num">03</span><p><strong>Trabajas, produces, intentas — y la prosperidad no se queda.</strong><br>Como si hubiera una pared invisible que no terminas de entender ni de romper.</p></article>
+  <article class="pain-card reveal"><span class="num">04</span><p><strong>Sientes el peso de algo que no nació contigo.</strong><br>Cargas decisiones, miedos o creencias que no reconoces como propios, pero que dirigen tu vida.</p></article>
+  <article class="pain-card reveal"><span class="num">05</span><p><strong>Sabes que viniste a algo más, pero el camino no aparece claro.</strong><br>Buscas propósito y dirección, no solo bienestar — quieres entender para qué te pasan las cosas.</p></article>
+  <article class="pain-card reveal"><span class="num">06</span><p><strong>Estás listo para mirar de frente, no solo sanar la superficie.</strong><br>Buscas un proceso profundo, integrador, con personas que también están dispuestas a evolucionar.</p></article>
+</div>
+        </div>
+      </section>
+
+      <section class="section section-cream" id="sistema">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="kicker">El sistema integrado</p>
+            <h2 class="title">Tres códigos. Una sola lectura de transformación.</h2>
+            <p class="subtitle">Cada disciplina ilumina un nivel distinto de tu historia. Juntas forman una cartografía para reconocer el origen del patrón, la emoción asociada y el movimiento evolutivo posible.</p>
+            <div class="gold-rule"></div>
+          </div>
+          <div class="codes-grid">
+            <article class="code-card reveal">
+              <div>
+                <div class="code-icon" aria-hidden="true"><img src="cons-mark.png" alt="" /></div>
+                <h3>Código Sistémico®</h3>
+                <p>Es una herramienta de autoconocimiento y transformación que integra Genealogía, Constelaciones Familiares, Numerología Evolutiva y principios de las leyes universales aplicadas a las relaciones humanas. A través de este enfoque, las personas pueden comprender cómo su historia familiar, los patrones heredados y las dinámicas inconscientes influyen en el amor, la prosperidad, la salud y la adaptabilidad a los cambios.</p>
+                <p>Su propósito es ayudar a revelar la información oculta detrás de las experiencias personales, fortaleciendo la conexión con uno mismo, con la familia y con las fuerzas que favorecen el equilibrio, el orden y la evolución consciente. Haciendo de mentes rígidas mentes flexibles desde el amor.</p>
+                <p style="font-style: italic; margin-bottom: 1.2rem;">“Donde la sabiduría del sistema familiar y la Numerología Evolutiva se unen para revelar el propósito oculto detrás de tu historia, reencuadrando con amor tu percepción de lo vivido”.</p>
+              </div>
+              <span class="code-tag">Linaje · Orden · Pertenencia</span>
+            </article>
+            <article class="code-card reveal">
+              <div>
+                <div class="code-icon" aria-hidden="true"><img src="numer-mark.png" alt="" /></div>
+                <h3>Numerología Evolutiva</h3>
+                <p>Es una herramienta de autoconocimiento y despertar de conciencia que descifra tu código numérico único para revelar tu propósito, lecciones, talentos y camino evolutivo, conectando tu personalidad con la esencia de tu alma. En este 2026 busca ayudarte a descubrir tu camino más certero y auténtico, aquello para lo que has venido.</p>
+                <p>Favorece la transformación de patrones repetitivos, el aprovechamiento de las energías del año y una vida con mayor éxito, coherencia y plenitud: éxito al conectar con tu alma numérica y convertirte en tu propio creador.</p>
+              </div>
+              <span class="code-tag">Mapa · Ciclos · Propósito</span>
+            </article>
+            <article class="code-card reveal">
+              <div>
+                <div class="code-icon" aria-hidden="true"><img src="brand-mark.png" alt="" /></div>
+                <h3>Bioevolutiva Consciente</h3>
+                <p>La Bioevolutiva Consciente es un método o herramienta de transformación integral que une cuatro lenguajes para descifrar y transformar lo que te bloquea. Primero, la Biodescodificación lee los códigos grabados en tu cuerpo a través de síntomas, emociones y memorias heredadas. Después, la Numerología Evolutiva aporta un mapa profundo de tu alma —con tu fecha de nacimiento y tu nombre— revelando propósito, talentos, sombras y patrones repetitivos.</p>
+                <p>A esto se suman la visualización creativa y las metáforas, que permiten dialogar directamente con el inconsciente, reprogramar memorias celulares y abrir nuevas rutas de sanación. No solo entiendes el origen de tus bloqueos, sino que accedes a una experiencia transformadora que integra mente, emoción, cuerpo y espíritu, guiándote de forma práctica hacia tu evolución personal.</p>
+              </div>
+              <span class="code-tag">Emoción · Cuerpo · Mensaje</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-navy" id="guias">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="kicker">Quiénes guían el proceso</p>
+            <h2 class="title">Tres miradas, una misma intención: acompañar la evolución.</h2>
+            <p class="subtitle">El equipo reúne experiencia terapéutica, historia personal y una práctica enfocada en hacer consciente lo que antes operaba en silencio.</p>
+            <div class="gold-rule"></div>
+          </div>
+          <div class="speakers-grid">
+            <article class="speaker-card reveal">
+              <div>
+                <div class="speaker-avatar"><img src="zuly.jpg" alt="Zuly Astrid Román Salazar"></div>
+                <h3>Zuly Astrid Román Salazar</h3>
+                <p class="speaker-meta">Código Sistémico · Constelaciones familiares</p>
+                <p style="font-style: italic; margin-bottom: 1.2rem;">Una crisis me rompió por dentro, pero también me obligó a mirar mis raíces. Lo que descubrí transformó mi vida y hoy lo comparto contigo.</p>
+                <p>Llevo más de 20 años acompañando procesos de transformación, pero mi camino no comenzó en un aula, comenzó con el dolor más profundo que puede vivir una madre. Esa experiencia me enseñó que los sistemas familiares guardan memorias que el cuerpo y el alma cargan, aunque nadie hable de ellas. Hoy acompaño a otros a ver lo que el sistema ha callado.</p>
+              </div>
+              <div class="speaker-origin">Colombia</div>
+            </article>
+            <article class="speaker-card reveal">
+              <div>
+                <div class="speaker-avatar"><img src="pilar.jpg" alt="Pilar Fernández García"></div>
+                <h3>Pilar Fernández García</h3>
+                <p class="speaker-meta">Numerología Evolutiva · Creadora del sistema</p>
+                <p style="font-style: italic; margin-bottom: 1.2rem;">Ahora me mueve ayudar a soltar lo que no sirve, a entender la mente y el corazón, y a dar ese salto que da miedo pero nos hace libres. Me impulsa acompañar en la sanación de karmas y programas heredados de los ancestros, para que puedas ser realmente tú: recuperar tu autenticidad y limpiar esos roles y arquetipos antiguos que ya no te representan.</p>
+                <p>Mi camino con la Numerología Evolutiva me permitió entender la vida, encontrar respuestas y ver cómo la niña se convirtió en una mujer fuerte, capaz de limpiar las cadenas de su linaje y convertirse en creadora de su propia realidad. Me abrió al mundo con un mapa y un nuevo lenguaje, capaz de descifrar lo que a simple vista no se ve. Hubo un momento en que no entendía mis repeticiones, ni mis miedos… hasta que descubrí que los números guardan la huella de nuestra alma y de nuestra identidad. No es magia: es el lenguaje que explica quién eres, qué has venido a aprender y cómo evolucionar.</p>
+              </div>
+              <div class="speaker-origin">España</div>
+            </article>
+            <article class="speaker-card reveal">
+              <div>
+                <div class="speaker-avatar"><img src="aimee.jpg" alt="Luisa Aimée Flores Barbará"></div>
+                <h3>Luisa Aimée Flores Barbará</h3>
+                <p class="speaker-meta">Bioevolutiva Consciente · Numerología en el árbol familiar</p>
+                <p style="font-style: italic; margin-bottom: 1.2rem;">Mi cuerpo me habló con un síntoma que apagó mi voz… para que por fin pudiera escucharme y expresarme desde mi verdad.<br>Hoy uso mi voz para enseñarte a resignificar esos mensajes y a sanar.<br>Porque curar es temporal; sanar, para siempre.</p>
+                <p>En 2011 recibí un diagnóstico que me cimbró. Convencida de que si yo había generado el síntoma, podría revertirlo, encontré en la biodescodificación y la numerología la respuesta que buscaba. Hoy estoy sana y enseño exactamente aquello que me sanó.</p>
+              </div>
+              <div class="speaker-origin">México</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cream" id="sedes">
+        <div class="container cities-wrap">
+          <div class="reveal">
+            <p class="kicker">Fechas y sedes</p>
+            <h2 class="title">México será el punto de encuentro.</h2>
+            <p class="subtitle">Estas son las primeras sedes confirmadas para la experiencia en México. Próximamente compartiremos más detalles sobre horarios, modalidades de registro y posibles nuevas ciudades.</p>
+            <div class="gold-rule"></div>
+            <div class="city-list" style="margin-top:28px">
+              <div class="city-item"><b>Estado de México</b><span>15 agosto</span></div>
+              <div class="city-item"><b>Puebla</b><span>22 agosto</span></div>
+              <div class="city-item"><b>Teotihuacan</b><span>29 agosto</span></div>
+            </div>
+          </div>
+          <div class="map-panel reveal" aria-label="Mapa visual estilizado de sedes en México">
+  <div class="city-dot teotihuacan">Teotihuacan</div>
+  <div class="city-dot edomex">Edo. de Méx.</div>
+  <div class="city-dot puebla">Puebla</div>
+  <div class="mexico-word">México</div>
+</div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="registro">
+        <div class="container">
+          <div class="final-card reveal">
+            <p class="kicker">Próximas fechas</p>
+            <h2>La gira está por <em>abrirse</em>.</h2>
+            <p>Sigue nuestras redes para ser el primero en enterarte de fechas, sedes y apertura de registro.</p>
+            <div class="interest-box">
+              <a class="btn-primary" href="https://www.instagram.com/tu.codigoevolutivo/" target="_blank">Síguenos en Instagram</a>
+              <a class="btn-secondary" href="https://www.facebook.com/profile.php?id=61590513938655" target="_blank">Síguenos en Facebook</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="footer-brand">Tu Código Evolutivo</p>
+        <p>Gira México · Código Sistémico · Numerología Evolutiva · Bioevolutiva Consciente</p>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/tu.codigoevolutivo/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61590513938655" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/@tu.codigo.evolutivo" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach((el, index) => {
+      el.style.transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
