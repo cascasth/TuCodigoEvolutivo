@@ -111,6 +111,68 @@
 
     @media (max-width:980px){.webinar-grid{grid-template-columns:1fr;max-width:620px;margin:0 auto}.webinar-image{aspect-ratio:1.15/1}}
     @media (max-width:720px){.page{width:min(94%,100%);padding-top:22px}.topbar{align-items:flex-start;flex-direction:column}.menu{justify-content:flex-start}.hero{border-radius:26px;padding:42px 20px}.webinar-content{padding:21px}.webinar-content h3{font-size:1.5rem}.social-section,.note-section{padding:24px 20px}.btn{width:100%}}
+
+    .hidden-gift {
+  display: none !important;
+}
+
+    .gift-section {
+  padding: 36px 0;
+}
+
+.gift-card {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 42px;
+  text-align: center;
+  border: 1px solid rgba(228, 171, 55, 0.55);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(228, 171, 55, 0.12), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.gift-card .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #e4ab37;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.gift-card h2 {
+  margin: 0 0 18px;
+  color: #ffc85a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.gift-card p {
+  max-width: 760px;
+  margin: 0 auto 14px;
+  color: #fff4d6;
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+.gift-card .btn {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .gift-card {
+    padding: 36px 24px;
+    border-radius: 22px;
+  }
+
+  .gift-card p {
+    font-size: 1rem;
+  }
+}
+  
   </style>
 </head>
 
@@ -206,19 +268,26 @@
         <a class="btn btn-primary" href="https://chat.whatsapp.com/BH7XKlethJXDKHa4hoQYXQ" target="_blank" rel="noopener">Entrar al grupo de WhatsApp</a>
       </section>
 
-<section class="section gift-section">
+<section class="section gift-section hidden-gift">
   <div class="container">
-    <span class="eyebrow">Regalo práctico</span>
-    <h2>¿Ya asististe a un webinar?</h2>
-    <p>
-      Responde una breve encuesta y descarga el material práctico del encuentro.
-      Tus respuestas nos ayudan a preparar mejor los próximos webinars y la experiencia presencial en México.
-    </p>
-    <a class="btn primary" href="LINK_DEL_GOOGLE_FORM" target="_blank" rel="noopener">
-      Responder encuesta y descargar regalo
-    </a>
+    <div class="gift-card">
+      <span class="eyebrow">Material complementario</span>
+      <h2>Recibe el regalo práctico del webinar</h2>
+      <p>
+        Si participaste en alguno de nuestros encuentros gratuitos —o te registraste y quieres recibir el material complementario— responde este formulario breve.
+      </p>
+      <p>
+        Tus respuestas nos ayudarán a preparar mejor los próximos webinars y a enviarte información útil sobre la experiencia presencial en México.
+      </p>
+
+      <a class="btn primary" href="https://forms.gle/9NgQT3KxPahpWRpg9" target="_blank" rel="noopener">
+        Responder formulario y recibir material
+      </a>
+    </div>
   </div>
 </section>
+
+  
       
       <section class="social-section" id="redes">
         <h2>Síguenos en redes</h2>
