@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Política de Privacidad | Tu Código Evolutivo</title>
+  <meta name="description" content="Política de privacidad y protección de datos personales de Tu Código Evolutivo." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://www.tucodigoevolutivo.com/privacidad.html" />
+
+  <style>
+    :root {
+      --azul-profundo: #152b72;
+      --azul-noche: #07122f;
+      --dorado: #d9b76f;
+      --dorado-suave: #f0d99a;
+      --marfil: #f7f1df;
+      --texto-suave: #d9ddf2;
+      --borde: rgba(217, 183, 111, 0.35);
+      --fondo-card: rgba(255, 255, 255, 0.055);
+      --sombra: rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(217, 183, 111, 0.14), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(217, 183, 111, 0.10), transparent 35%),
+        linear-gradient(135deg, var(--azul-noche), var(--azul-profundo));
+      color: var(--texto-suave);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(1080px, 92%);
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    header {
+      text-align: center;
+      padding: 42px 24px;
+      border: 1px solid var(--borde);
+      border-radius: 28px;
+      background: rgba(0, 0, 0, 0.18);
+      box-shadow: 0 24px 60px var(--sombra);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent, rgba(217, 183, 111, 0.08), transparent);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--dorado-suave);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--marfil);
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--texto-suave);
+      font-size: 1.05rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .last-update {
+      margin-top: 22px;
+      color: var(--dorado-suave);
+      font-size: 0.92rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      margin: 28px 0;
+      padding: 18px;
+      border: 1px solid var(--borde);
+      border-radius: 22px;
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: var(--marfil);
+      text-decoration: none;
+      border: 1px solid rgba(217, 183, 111, 0.28);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--azul-noche);
+      background: var(--dorado-suave);
+      border-color: var(--dorado-suave);
+    }
+
+    main {
+      display: grid;
+      gap: 22px;
+    }
+
+    section {
+      padding: 28px;
+      border: 1px solid var(--borde);
+      border-radius: 24px;
+      background: var(--fondo-card);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(6px);
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin-bottom: 14px;
+      color: var(--dorado-suave);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin: 22px 0 8px;
+      color: var(--marfil);
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin: 10px 0 18px 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--marfil);
+    }
+
+    a {
+      color: var(--dorado-suave);
+    }
+
+    .notice {
+      border-left: 4px solid var(--dorado);
+      padding: 16px 18px;
+      background: rgba(217, 183, 111, 0.09);
+      border-radius: 14px;
+      margin-top: 16px;
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(217, 183, 111, 0.34);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--azul-noche);
+      background: linear-gradient(135deg, var(--dorado-suave), var(--dorado));
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 26px;
+      border-top: 1px solid var(--borde);
+      color: rgba(247, 241, 223, 0.75);
+      font-size: 0.92rem;
+    }
+
+    .back-home {
+      margin-top: 18px;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(94%, 100%);
+        padding: 28px 0 56px;
+      }
+
+      header {
+        padding: 34px 20px;
+        border-radius: 22px;
+      }
+
+      section {
+        padding: 22px;
+        border-radius: 20px;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      nav a {
+        font-size: 0.86rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">Tu Código Evolutivo</p>
+      <h1>Política de Privacidad</h1>
+      <p class="subtitle">
+        En este espacio cuidamos tu información personal con respeto, claridad y responsabilidad.
+        Esta política explica qué datos podemos recopilar, para qué los usamos y cómo puedes ejercer tus derechos.
+      </p>
+      <p class="last-update">Última actualización: 25 de junio de 2026</p>
+    </header>
+
+    <nav aria-label="Contenido de la política de privacidad">
+      <ul>
+        <li><a href="#responsable">Responsable</a></li>
+        <li><a href="#datos">Datos que recopilamos</a></li>
+        <li><a href="#finalidades">Finalidades</a></li>
+        <li><a href="#herramientas">Herramientas externas</a></li>
+        <li><a href="#derechos">Derechos ARCO</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="responsable">
+        <h2>1. Responsable del tratamiento de datos personales</h2>
+        <p>
+          Para efectos de la presente Política de Privacidad, <strong>Tu Código Evolutivo</strong>,
+          proyecto dedicado a la difusión, organización y registro de experiencias, talleres, eventos
+          y contenidos relacionados con herramientas de autoconocimiento y transformación personal,
+          es responsable del uso y protección de los datos personales que nos proporciones.
+        </p>
+
+        <p>
+          Esta política aplica a la información recopilada a través del sitio web
+          <strong>www.tucodigoevolutivo.com</strong>, formularios de registro, comunicaciones por correo
+          electrónico, mensajes enviados por redes sociales y otros medios digitales relacionados con
+          nuestras actividades.
+        </p>
+
+        <div class="notice">
+          <p>
+            <strong>Nota importante:</strong> Tu Código Evolutivo no ofrece diagnósticos médicos,
+            psicológicos, legales ni terapéuticos. Las actividades, lecturas y contenidos compartidos
+            tienen fines de autoconocimiento, reflexión, formación y desarrollo personal.
+          </p>
+        </div>
+      </section>
+
+      <section id="datos">
+        <h2>2. Datos personales que podemos recopilar</h2>
+        <p>
+          Dependiendo del formulario, evento o medio de contacto utilizado, podemos solicitar o recibir
+          los siguientes datos personales:
+        </p>
+
+        <ul>
+          <li>Nombre completo o nombre de registro.</li>
+          <li>Correo electrónico.</li>
+          <li>Número telefónico o contacto de WhatsApp, si lo proporcionas voluntariamente.</li>
+          <li>Ciudad, estado o país de residencia.</li>
+          <li>Evento, sede o actividad de interés.</li>
+          <li>Respuestas enviadas mediante formularios de registro.</li>
+          <li>Información necesaria para confirmar tu asistencia, dar seguimiento a tu solicitud o enviarte información relacionada con el evento.</li>
+        </ul>
+
+        <p>
+          No solicitamos datos personales sensibles de manera obligatoria. En caso de que una persona
+          comparta voluntariamente información adicional dentro de formularios, mensajes o sesiones,
+          dicha información será tratada con confidencialidad y únicamente para la finalidad para la cual
+          fue proporcionada.
+        </p>
+      </section>
+
+      <section id="finalidades">
+        <h2>3. Finalidades del uso de tus datos</h2>
+
+        <h3>Finalidades principales</h3>
+        <p>
+          Utilizamos tus datos personales para:
+        </p>
+
+        <ul>
+          <li>Registrar tu interés o participación en eventos, talleres, webinars o actividades de Tu Código Evolutivo.</li>
+          <li>Confirmar tu asistencia o pre-registro.</li>
+          <li>Enviarte información logística sobre fechas, sedes, horarios, costos y detalles del evento.</li>
+          <li>Responder dudas o solicitudes enviadas por correo, formularios o redes sociales.</li>
+          <li>Gestionar listas de asistentes, cupos y comunicación previa o posterior al evento.</li>
+          <li>Dar seguimiento a solicitudes relacionadas con las actividades ofrecidas.</li>
+        </ul>
+
+        <h3>Finalidades secundarias</h3>
+        <p>
+          También podremos utilizar tus datos para:
+        </p>
+
+        <ul>
+          <li>Enviarte información sobre futuros eventos, contenidos, actividades o experiencias relacionadas.</li>
+          <li>Compartir recordatorios, avisos importantes o materiales informativos.</li>
+          <li>Mejorar la organización, comunicación y experiencia de nuestras actividades.</li>
+        </ul>
+
+        <p>
+          Si no deseas que tus datos sean utilizados para finalidades secundarias, puedes solicitarlo
+          en cualquier momento escribiendo al correo indicado en esta política.
+        </p>
+      </section>
+
+      <section id="consentimiento">
+        <h2>4. Consentimiento</h2>
+        <p>
+          Al proporcionar tus datos personales mediante nuestros formularios, correos, redes sociales
+          o cualquier otro medio digital relacionado con Tu Código Evolutivo, aceptas que tu información
+          sea tratada conforme a esta Política de Privacidad.
+        </p>
+
+        <p>
+          En caso de no estar de acuerdo con el uso de tus datos, te pedimos no enviar formularios ni
+          proporcionar información personal a través de nuestros canales.
+        </p>
+      </section>
+
+      <section id="herramientas">
+        <h2>5. Uso de herramientas externas</h2>
+        <p>
+          Para gestionar registros, comunicaciones y organización de eventos, podemos utilizar herramientas
+          digitales de terceros, tales como:
+        </p>
+
+        <ul>
+          <li>Google Forms o formularios similares para recopilar registros.</li>
+          <li>Correo electrónico para comunicación directa.</li>
+          <li>Redes sociales como Facebook, Instagram o TikTok para difusión y contacto.</li>
+          <li>Servicios de almacenamiento o gestión digital necesarios para la operación del evento.</li>
+        </ul>
+
+        <p>
+          Estas plataformas pueden contar con sus propias políticas de privacidad y condiciones de uso.
+          Te recomendamos revisarlas cuando interactúes directamente con ellas.
+        </p>
+      </section>
+
+      <section id="transferencias">
+        <h2>6. Transferencia o comunicación de datos</h2>
+        <p>
+          Tus datos personales podrán ser compartidos únicamente con las personas organizadoras,
+          facilitadoras o colaboradoras directamente relacionadas con la gestión del evento o actividad
+          para la cual te registraste.
+        </p>
+
+        <p>
+          No vendemos, rentamos ni comercializamos tus datos personales. Solo podremos compartirlos
+          cuando sea necesario para cumplir con las finalidades descritas en esta política o cuando
+          exista una obligación legal aplicable.
+        </p>
+      </section>
+
+      <section id="seguridad">
+        <h2>7. Medidas de seguridad</h2>
+        <p>
+          Implementamos medidas razonables de seguridad administrativa, técnica y organizativa para
+          proteger tus datos personales contra daño, pérdida, alteración, destrucción, uso, acceso o
+          tratamiento no autorizado.
+        </p>
+
+        <p>
+          Aunque ningún sistema digital es absolutamente invulnerable, procuramos manejar la información
+          con responsabilidad, acceso limitado y únicamente por el tiempo necesario para cumplir con las
+          finalidades indicadas.
+        </p>
+      </section>
+
+      <section id="conservacion">
+        <h2>8. Conservación de datos</h2>
+        <p>
+          Conservaremos tus datos personales durante el tiempo necesario para gestionar tu registro,
+          participación, seguimiento y comunicación relacionada con el evento o actividad correspondiente.
+        </p>
+
+        <p>
+          Posteriormente, podremos conservar información básica de contacto si aceptaste recibir
+          comunicaciones futuras, salvo que solicites la eliminación de tus datos o la revocación de tu
+          consentimiento.
+        </p>
+      </section>
+
+      <section id="derechos">
+        <h2>9. Derechos ARCO</h2>
+        <p>
+          Como titular de tus datos personales, puedes ejercer tus derechos de:
+        </p>
+
+        <ul>
+          <li><strong>Acceso:</strong> conocer qué datos personales tenemos sobre ti.</li>
+          <li><strong>Rectificación:</strong> solicitar la corrección de datos incorrectos, incompletos o desactualizados.</li>
+          <li><strong>Cancelación:</strong> pedir la eliminación de tus datos cuando sea procedente.</li>
+          <li><strong>Oposición:</strong> oponerte al uso de tus datos para determinadas finalidades.</li>
+        </ul>
+
+        <p>
+          También puedes revocar tu consentimiento para el uso de tus datos personales o solicitar que
+          dejemos de enviarte comunicaciones informativas.
+        </p>
+
+        <div class="contact-box">
+          <p>
+            Para ejercer cualquiera de estos derechos, envía una solicitud al correo:
+          </p>
+
+          <p>
+            <strong>
+              <a href="mailto:contacto@tucodigoevolutivo.com">contacto@tucodigoevolutivo.com</a>
+            </strong>
+          </p>
+
+          <p>
+            Tu solicitud deberá incluir:
+          </p>
+
+          <ul>
+            <li>Nombre completo.</li>
+            <li>Correo electrónico de contacto.</li>
+            <li>Derecho que deseas ejercer.</li>
+            <li>Descripción clara de tu solicitud.</li>
+            <li>Algún elemento que nos permita identificar el registro relacionado, por ejemplo: sede, evento o formulario utilizado.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cookies">
+        <h2>10. Cookies y tecnologías similares</h2>
+        <p>
+          Este sitio puede utilizar cookies o tecnologías similares para mejorar la experiencia de navegación,
+          analizar el funcionamiento del sitio o facilitar la integración con servicios externos.
+        </p>
+
+        <p>
+          Puedes configurar tu navegador para rechazar o eliminar cookies. Sin embargo, algunas funciones
+          del sitio podrían no operar correctamente si las desactivas.
+        </p>
+      </section>
+
+      <section id="menores">
+        <h2>11. Datos de menores de edad</h2>
+        <p>
+          Las actividades y registros de Tu Código Evolutivo están dirigidos principalmente a personas
+          mayores de edad. No recopilamos intencionalmente datos personales de menores sin autorización
+          de madre, padre, tutor o representante legal.
+        </p>
+
+        <p>
+          Si consideras que hemos recibido datos de una persona menor de edad sin autorización, puedes
+          escribirnos para solicitar su eliminación.
+        </p>
+      </section>
+
+      <section id="cambios">
+        <h2>12. Cambios a esta política</h2>
+        <p>
+          Tu Código Evolutivo podrá modificar o actualizar esta Política de Privacidad cuando sea necesario,
+          por cambios legales, administrativos, operativos o de funcionamiento del sitio.
+        </p>
+
+        <p>
+          Cualquier cambio será publicado en esta misma página. Te recomendamos revisarla periódicamente
+          para conocer la versión vigente.
+        </p>
+      </section>
+
+      <section id="contacto">
+        <h2>13. Contacto</h2>
+        <p>
+          Si tienes dudas sobre esta Política de Privacidad, el uso de tus datos personales o deseas ejercer
+          tus derechos ARCO, puedes comunicarte con nosotros:
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Tu Código Evolutivo</strong></p>
+          <p>Sitio web: <a href="https://www.tucodigoevolutivo.com/">www.tucodigoevolutivo.com</a></p>
+          <p>Correo: <a href="mailto:contacto@tucodigoevolutivo.com">contacto@tucodigoevolutivo.com</a></p>
+        </div>
+
+        <div class="button-row">
+          <a class="btn" href="index.html">Volver al inicio</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Tu Código Evolutivo. Todos los derechos reservados.</p>
+      <p class="back-home">Autoconocimiento · Transformación · Conciencia</p>
+    </footer>
+  </div>
+</body>
+</html>
