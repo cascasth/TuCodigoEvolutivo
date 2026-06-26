@@ -50,7 +50,16 @@
 
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0 28px}
     .brand{display:flex;align-items:center;gap:14px}
-    .brand-mark{width:58px;height:58px;border:1px solid var(--borde-dorado);border-radius:50%;display:grid;place-items:center;color:var(--dorado-suave);font-family:"Cormorant Garamond",serif;font-size:1.3rem;box-shadow:0 0 24px rgba(217,154,43,.18)}
+    .brand-mark-img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:50%;
+  border:1px solid var(--borde-dorado);
+  padding:6px;
+  background:rgba(242,198,109,.08);
+  box-shadow:0 0 24px rgba(217,154,43,.18);
+}
     .brand-text{font-family:"Cormorant Garamond",serif;color:var(--dorado-suave);font-size:1.25rem;line-height:1.05;font-weight:700}
     .menu{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .menu a{font-size:.82rem;color:var(--marfil);border:1px solid rgba(242,198,109,.35);padding:8px 14px;border-radius:999px;transition:.2s ease;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
@@ -109,7 +118,7 @@
   <div class="page">
     <header class="topbar">
       <a class="brand" href="index.html" aria-label="Ir al inicio de Tu Código Evolutivo">
-        <div class="brand-mark">TCE</div>
+      <img class="brand-mark-img" src="brand-mark.png" alt="" aria-hidden="true">
         <div class="brand-text">Tu Código<br>Evolutivo</div>
       </a>
 
