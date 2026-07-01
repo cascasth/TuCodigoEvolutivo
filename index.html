@@ -44,23 +44,34 @@
     .nav-cta:hover { background: var(--gold-light); }
 
     /* HERO */
-    .hero { padding: clamp(4.5rem,11vw,7rem) var(--px) clamp(3.5rem,8vw,5.5rem); background: radial-gradient(ellipse 85% 65% at 50% 0%, rgba(21,43,114,.95) 0%, var(--navy-deep) 72%); position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.055)' stroke-width='0.5'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3Cline x1='10' y1='30' x2='50' y2='30'/%3E%3Cline x1='30' y1='10' x2='30' y2='50'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 60px 60px; opacity: .55; pointer-events: none; }
+    .hero {
+  padding: clamp(4.5rem,11vw,7rem) var(--px) clamp(3.5rem,8vw,5.5rem);
+  background-color: #f3e9c9;
+  background-image:
+    radial-gradient(rgba(255,255,255,.95) 1px, transparent 1.6px),
+    linear-gradient(135deg, #f8f1dd 0%, #f0e0b8 40%, #e6cd92 75%, #f6efdc 100%),
+    radial-gradient(ellipse 120% 80% at 50% -10%, rgba(255,255,255,.9) 0%, rgba(245,242,235,0) 55%);
+  background-size: 36px 36px, cover, cover;
+  background-repeat: repeat, no-repeat, no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(154,122,32,0.12)' stroke-width='0.5'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3Cline x1='10' y1='30' x2='50' y2='30'/%3E%3Cline x1='30' y1='10' x2='30' y2='50'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 60px 60px; opacity: .55; pointer-events: none; }
     .hero .inner { position: relative; max-width: 960px; margin: 0 auto; }
-    .hero-layout { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
-    .hero-logo-wrap { display: flex; align-items: center; justify-content: flex-end; }
-    .hero-logo-img { height: clamp(180px, 32vw, 340px); width: auto; opacity: 0.92; filter: drop-shadow(0 0 40px rgba(201,168,76,0.18)); }
-    @media (max-width: 560px) {
-      .hero-layout { grid-template-columns: 1fr; }
-      .hero-logo-wrap { justify-content: flex-start; margin-top: 1.5rem; }
-      .hero-logo-img { height: 140px; }
+    .hero-layout { display: flex; flex-direction: column; align-items: center; gap: 1.75rem; text-align: center; }
+.hero-content { max-width: 640px; }
+.hero-logo-wrap { display: flex; align-items: center; justify-content: center; }
+.hero-logo-img { width: min(90%, 560px); height: auto; opacity: 0.96; filter: drop-shadow(0 4px 24px rgba(201,168,76,0.25)); }
+@media (max-width: 560px) {
+  .hero-logo-img { width: min(92%, 320px); }
+}
     }
-    .hero-eyebrow { font-size: .7rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .hero-title { font-family: var(--serif); font-size: clamp(2.5rem,7.5vw,4rem); font-weight: 700; line-height: 1.07; color: #fff; margin-bottom: 1rem; }
-    .hero-title em { color: var(--gold); font-style: normal; }
-    .hero-slogan { font-family: var(--serif); font-size: clamp(1.2rem,3vw,1.55rem); font-weight: 400; font-style: italic; color: rgba(255,255,255,.58); margin-bottom: 1.35rem; letter-spacing: .01em; }
-    .hero-slogan strong { color: var(--gold); font-style: normal; font-weight: 600; }
-    .hero-desc { font-size: .97rem; color: var(--text-on-dark); opacity: .75; max-width: 520px; margin-bottom: 2.25rem; line-height: 1.7; }
+    .hero-eyebrow { font-size: .7rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #8a6820; margin-bottom: 1rem; }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.5rem,7.5vw,4rem); font-weight: 700; line-height: 1.07; color: var(--text-dark); margin-bottom: 1rem; }
+    .hero-title em { color: #7a5c0d; font-style: normal; }
+    .hero-slogan { font-family: var(--serif); font-size: clamp(1.2rem,3vw,1.55rem); font-weight: 400; font-style: italic; color: rgba(26,26,46,.55); margin-bottom: 1.35rem; letter-spacing: .01em; }
+    .hero-slogan strong { color: #7a5c0d; font-style: normal; font-weight: 600; }
+    .hero-desc { font-size: .97rem; color: var(--text-dark-mid); max-width: 520px; margin-bottom: 2.25rem; line-height: 1.7; margin-left: auto; margin-right: auto; }
     .hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
 
     /* BUTTONS */
@@ -68,13 +79,15 @@
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
     .btn-ghost { border: 1px solid var(--gold-border); color: var(--gold); font-size: .9rem; padding: .85rem 1.75rem; border-radius: 4px; transition: background .2s; display: inline-block; }
     .btn-ghost:hover { background: var(--gold-dim); }
+    .hero .btn-ghost { border-color: rgba(122,92,13,.35); color: #7a5c0d; }
+    .hero .btn-ghost:hover { background: rgba(122,92,13,.08); }
 
     /* SECTION BASE */
     .section { padding: clamp(3rem,8vw,5rem) var(--px); }
     .inner { max-width: var(--max); margin: 0 auto; }
-    .section--dark  { background: var(--navy); }
-    .section--deep  { background: var(--navy-deep); }
-    .section--mid   { background: var(--navy-mid); }
+    .section--dark  { background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 100%); }
+    .section--deep  { background: linear-gradient(155deg, var(--navy-deep) 0%, var(--navy) 100%); }
+    .section--mid   { background: linear-gradient(155deg, var(--navy-mid) 0%, var(--navy) 100%); }
     .section--cream { background: var(--cream); }
 
     /* EYEBROWS */
@@ -90,7 +103,15 @@
     .section-sub--light { color: var(--text-dark-mid); }
 
     /* TEAM SECTION */
-    .team-section { background: var(--cream); padding: clamp(3rem,8vw,5rem) var(--px); }
+     .team-section {
+  background-color: #f3e9c9;
+  background-image:
+    radial-gradient(rgba(255,255,255,.95) 1px, transparent 1.6px),
+    linear-gradient(135deg, #f8f1dd 0%, #f0e0b8 45%, #e6cd92 80%, #f6efdc 100%);
+  background-size: 36px 36px, cover;
+  background-repeat: repeat, no-repeat;
+  padding: clamp(3rem,8vw,5rem) var(--px);
+}
     .team-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
     .team-photo { border-radius: 10px; width: 100%; object-fit: cover; border: 1px solid var(--cream-dark); }
     .team-desc { font-size: .92rem; color: var(--text-dark-mid); line-height: 1.7; margin-bottom: 1.25rem; }
@@ -199,6 +220,9 @@
   <section class="hero">
     <div class="inner">
       <div class="hero-layout">
+        <div class="hero-logo-wrap">
+          <img class="hero-logo-img" src="/gira-mexico-banner.png" alt="Tu Código Evolutivo · Gira México 2026" />
+        </div>
         <div class="hero-content">
           <p class="hero-eyebrow">Gira México · Agosto 2026</p>
           <h1 class="hero-title">Descifra el <em>código</em><br>que dirige tu vida</h1>
@@ -209,6 +233,7 @@
             <a class="btn-ghost" href="https://www.tucodigoevolutivo.com/webinars.html">Ver webinars gratuitos</a>
           </div>
         </div>
+      </div>
         <div class="hero-logo-wrap">
           <img class="hero-logo-img" src="/brand-mark.png" alt="Tu Código Evolutivo" />
         </div>
