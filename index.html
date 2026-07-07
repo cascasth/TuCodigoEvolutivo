@@ -165,6 +165,34 @@
     .price-amount { font-family: var(--serif); font-size: 3.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
     .price-label { font-size: .82rem; color: var(--text-muted); line-height: 1.5; }
     .event-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; }
+    .event-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 1.25rem;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.event-divider::before,
+.event-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--gold-border);
+}
+
+.event-cards--single {
+  grid-template-columns: minmax(260px, 1fr);
+}
+
+.event-card--ritual {
+  background: rgba(201,168,76,.07);
+  border-color: rgba(224,194,120,.42);
+}
     .event-card { background: rgba(255,255,255,.03); border: 1px solid var(--gold-border); border-radius: 10px; padding: 1.5rem; }
     .event-date-badge { font-size: .68rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
     .event-city { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: .2rem; }
@@ -393,15 +421,22 @@
           <div class="event-venue">Sede: <span>Por confirmar</span></div>
           <a class="btn-event" href="https://forms.gle/qHyFP6YyMsNtmsdN6" target="_blank" rel="noopener">Registrarme · Puebla →</a>
         </div>
-        <div class="event-card">
-          <div class="event-date-badge">29 de agosto · horario por confirmar</div>
-          <div class="event-city">Teotihuacán</div>
-          <div class="event-state">Estado de México</div>
-          <div class="event-venue">Ritual de cierre: <span>detalles por confirmar</span></div>
-          <div class="event-venue">Costo: <span>90 EUR</span><br><small>no incluye entrada al sitio arqueológico</small></div>
-          <a class="btn-event" href="https://forms.gle/WR96YAxysovjR2Us8" target="_blank" rel="noopener">Registrarme · Teotihuacán →</a>
-        </div>
-      </div>
+      </div>  
+
+      <div class="event-divider">
+  <span>Ritual chamánico</span>
+</div>
+        
+<div class="event-cards event-cards--single">
+  <div class="event-card event-card--ritual">
+    <div class="event-date-badge">29 de agosto · horario por confirmar</div>
+    <div class="event-city">Teotihuacán</div>
+    <div class="event-state">Estado de México</div>
+    <div class="event-venue">Ritual de cierre: <span>90 EUR por persona</span></div>
+    <div class="event-venue">Detalles: <span>horario y punto de encuentro por confirmar</span></div>
+    <a class="btn-event" href="https://forms.gle/WR96YAxysovjR2Us8" target="_blank" rel="noopener">Registrarme · Teotihuacán →</a>
+  </div>
+</div>
       <p class="event-note">El registro no confirma tu lugar automáticamente. El equipo organizador te contactará para coordinar la forma de pago y los detalles finales.</p>
     </div>
   </section>
