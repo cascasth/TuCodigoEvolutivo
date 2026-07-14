@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Código Evolutivo · Gira México 2026</title>
+  <meta name="description" content="3 herramientas para entender la vida: Conócete, Comprende, Transforma. Bioevolutiva Consciente, Código Sistémico y Tu Numerología Evolutiva. Gira México · Agosto 2026." />
+  <link rel="icon" href="brand-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- AOS Library for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0d1f5c;
+      --navy-deep: #081240;
+      --navy-mid: #152b72;
+      --gold: #c9a84c;
+      --gold-light: #e0c278;
+      --gold-dim: rgba(201,168,76,0.15);
+      --gold-border: rgba(201,168,76,0.28);
+      --cream: #f5f2eb;
+      --cream-dark: #e8e3d8;
+      --white: #ffffff;
+      --text-on-dark: rgba(255,255,255,0.82);
+      --text-muted: rgba(255,255,255,0.45);
+      --text-dark: #1a1a2e;
+      --text-dark-mid: rgba(26,26,46,0.62);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --max: 840px;
+      --px: clamp(1.25rem, 5vw, 2.5rem);
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); font-size: 16px; line-height: 1.65; background: var(--navy-deep); color: var(--text-on-dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--navy-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem var(--px); background: rgba(8,18,64,0.8); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.08); transition: var(--transition); }
+    .nav.scrolled { padding: 0.6rem var(--px); background: rgba(8,18,64,0.95); }
+    .nav-logo { display: flex; align-items: center; gap: .8rem; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: #fff; }
+    .nav-logo img { width: 28px; height: 28px; filter: drop-shadow(0 0 5px rgba(201,168,76,0.5)); }
+    .nav-cta { background: var(--gold); color: var(--navy-deep); font-size: .85rem; font-weight: 600; padding: 0.6rem 1.4rem; border-radius: 6px; transition: var(--transition); box-shadow: 0 4px 15px rgba(201,168,76,0.2); }
+    .nav-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.3); }
+
+    /* HERO */
+    .hero {
+      padding: clamp(7rem, 15vw, 10rem) var(--px) clamp(4rem, 10vw, 7rem);
+      background-color: #fdf6eb;
+      background-image: 
+        radial-gradient(circle at 2px 2px, rgba(201,168,76,0.08) 1px, transparent 0),
+        linear-gradient(135deg, #fef7eb 0%, #f9ead4 25%, #fdf6eb 55%, #f9ead4 80%, #fef7eb 100%);
+      background-size: 30px 30px, cover;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      min-height: 90vh;
+    }
+    
+    /* Floating Decorative Elements */
+    .hero-shape { position: absolute; border-radius: 50%; filter: blur(60px); z-index: 0; opacity: 0.4; }
+    .shape-1 { width: 300px; height: 300px; background: var(--gold-light); top: -100px; right: -50px; }
+    .shape-2 { width: 400px; height: 400px; background: #e8dfcf; bottom: -150px; left: -100px; }
+
+    .hero .inner { position: relative; max-width: 1100px; margin: 0 auto; z-index: 1; }
+    .hero-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
+    
+    .hero-logo-wrap { display: flex; align-items: center; justify-content: center; position: relative; }
+    .hero-logo-img { 
+      width: 100%; 
+      max-width: 420px;
+      height: auto; 
+      opacity: 0.98; 
+      filter: drop-shadow(0 10px 30px rgba(201,168,76,0.3));
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+      .hero-logo-wrap { order: -1; }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-ctas { justify-content: center; }
+    }
+
+    .hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #8a6820; margin-bottom: 1.5rem; display: block; }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.8rem, 8vw, 4.5rem); font-weight: 700; line-height: 1.05; color: var(--text-dark); margin-bottom: 1.5rem; }
+    .hero-title em { color: #7a5c0d; font-style: normal; position: relative; display: inline-block; }
+    .hero-title em::after { content: ''; position: absolute; bottom: 8px; left: 0; width: 100%; height: 8px; background: rgba(201,168,76,0.2); z-index: -1; }
+    
+    .hero-slogan { font-family: var(--serif); font-size: clamp(1.3rem, 3.5vw, 1.8rem); font-weight: 400; font-style: italic; color: rgba(26,26,46,.65); margin-bottom: 1.5rem; letter-spacing: .01em; }
+    .hero-slogan strong { color: #7a5c0d; font-style: normal; font-weight: 600; }
+    .hero-desc { font-size: 1.05rem; color: var(--text-dark-mid); max-width: 580px; margin-bottom: 2.5rem; line-height: 1.8; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* BUTTONS */
+    .btn-primary { 
+      background: var(--gold); 
+      color: var(--navy-deep); 
+      font-size: 0.95rem; 
+      font-weight: 600; 
+      padding: 1rem 2.2rem; 
+      border-radius: 8px; 
+      letter-spacing: .03em; 
+      transition: var(--transition); 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 15px rgba(201,168,76,0.25);
+    }
+    .btn-primary:hover { 
+      background: var(--gold-light); 
+      transform: translateY(-3px) scale(1.02); 
+      box-shadow: 0 8px 25px rgba(201,168,76,0.35);
+    }
+    
+    .btn-ghost { 
+      border: 2px solid var(--gold-border); 
+      color: var(--gold); 
+      font-size: 0.95rem; 
+      font-weight: 600;
+      padding: 1rem 2.2rem; 
+      border-radius: 8px; 
+      transition: var(--transition); 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-ghost:hover { 
+      background: var(--gold-dim); 
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    
+    .hero .btn-ghost { border-color: rgba(122,92,13,0.3); color: #7a5c0d; }
+    .hero .btn-ghost:hover { background: rgba(122,92,13,0.08); border-color: #7a5c0d; }
+
+    /* SECTION BASE */
+    .section { padding: clamp(5rem, 12vw, 8rem) var(--px); position: relative; }
+    .inner { max-width: var(--max); margin: 0 auto; }
+    .section--dark  { background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 100%); }
+    .section--deep  { background: linear-gradient(155deg, var(--navy-deep) 0%, var(--navy) 100%); }
+    .section--mid   { background: linear-gradient(155deg, var(--navy-mid) 0%, var(--navy) 100%); }
+    .section--cream { background: var(--cream); }
+
+    /* EYEBROWS */
+    .eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+    .eyebrow--amber { color: #8a6820; }
+
+    /* TITLES */
+    .section-title { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 1rem; }
+    .section-title em { color: var(--gold); font-style: normal; }
+    .section-title--light { color: var(--text-dark); }
+    .section-title--light em { color: #7a5c0d; }
+    .section-sub { font-size: 1.05rem; color: var(--text-on-dark); opacity: 0.8; margin-bottom: 3rem; max-width: 600px; line-height: 1.7; }
+    .section-sub--light { color: var(--text-dark-mid); opacity: 1; }
+
+    /* TEAM SECTION */
+    .team-section {
+      background-color: #f3e9c9;
+      background-image: 
+        radial-gradient(circle at 2px 2px, rgba(201,168,76,0.1) 1px, transparent 0),
+        linear-gradient(135deg, #fef7eb 0%, #f9ead4 30%, #fdf6eb 60%, #f9ead4 100%);
+      background-size: 40px 40px, cover;
+    }
+    .team-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .team-photo-wrap { position: relative; }
+    .team-photo-wrap::before { 
+      content: ''; 
+      position: absolute; 
+      top: 20px; 
+      left: 20px; 
+      right: -20px; 
+      bottom: -20px; 
+      border: 2px solid var(--gold); 
+      border-radius: 15px; 
+      z-index: 0; 
+    }
+    .team-photo { 
+      position: relative;
+      z-index: 1;
+      border-radius: 15px; 
+      width: 100%; 
+      object-fit: cover; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      transition: var(--transition);
+    }
+    .team-photo:hover { transform: translate(-10px, -10px); }
+    
+    .team-desc { font-size: 1rem; color: var(--text-dark-mid); line-height: 1.8; margin-bottom: 2rem; }
+    .team-names { display: flex; flex-direction: column; gap: 1rem; }
+    .team-name-item { display: flex; align-items: center; gap: .8rem; font-size: 0.95rem; color: var(--text-dark); }
+    .team-name-item strong { font-weight: 600; color: #7a5c0d; }
+    .team-name-item span { font-size: .85rem; color: var(--text-dark-mid); }
+    .team-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 10px rgba(201,168,76,0.5); }
+
+    @media (max-width: 768px) {
+      .team-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .team-photo-wrap { max-width: 400px; margin: 0 auto; }
+    }
+
+    /* BENEFITS */
+    .benefits-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .benefit { 
+      display: flex; 
+      gap: 1.5rem; 
+      padding: 2rem; 
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      transition: var(--transition);
+    }
+    .benefit:hover { 
+      background: rgba(255,255,255,0.06); 
+      transform: translateX(10px); 
+      border-color: var(--gold-border);
+    }
+    .benefit-marker { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; color: var(--gold); opacity: 0.6; min-width: 2.5rem; line-height: 1; }
+    .benefit-body strong { display: block; font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: .5rem; }
+    .benefit-body p { font-size: 0.95rem; color: var(--text-on-dark); opacity: 0.7; line-height: 1.7; }
+
+    /* PROFILES */
+    .profiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .profile-card { 
+      background: var(--white); 
+      border: 1px solid var(--cream-dark); 
+      border-radius: 12px; 
+      padding: 2rem; 
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    .profile-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(201,168,76,0.15); border-color: var(--gold); }
+    .profile-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+    .profile-text { font-size: 0.95rem; color: var(--text-dark-mid); line-height: 1.6; }
+
+    /* INCLUDES */
+    .includes-list { margin-top: 2rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .include-item { display: flex; align-items: center; gap: 1.2rem; padding: 1.2rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 1rem; transition: var(--transition); }
+    .include-item:hover { background: rgba(255,255,255,0.05); padding-left: 2rem; }
+    .include-item:last-child { border-bottom: none; }
+    .include-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 8px var(--gold); }
+
+    /* SPEAKERS */
+    .speakers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 2rem; margin-top: 3rem; }
+    .speaker-card { 
+      background: var(--white); 
+      border: 1px solid var(--cream-dark); 
+      border-radius: 15px; 
+      padding: 2.5rem 2rem; 
+      text-align: center; 
+      transition: var(--transition);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .speaker-card:hover { 
+      transform: translateY(-12px); 
+      border-color: #c9a84c; 
+      box-shadow: 0 20px 45px rgba(201,168,76,0.18); 
+    }
+    .speaker-avatar { 
+      width: 100px; 
+      height: 100px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      margin: 0 auto 1.5rem; 
+      border: 3px solid #e0c278; 
+      padding: 3px;
+      background: #fff;
+    }
+    .speaker-name { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .speaker-role { font-size: 0.85rem; font-weight: 600; color: #8a6820; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .speaker-country { font-size: 0.85rem; color: var(--text-dark-mid); margin-bottom: 1.2rem; }
+    .speaker-bio { font-size: 0.9rem; color: var(--text-dark-mid); line-height: 1.7; text-align: left; margin-bottom: 1.5rem; }
+    .speaker-links { display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; }
+    .speaker-link { 
+      font-size: 0.75rem; 
+      font-weight: 600;
+      color: var(--text-dark-mid); 
+      border: 1px solid var(--cream-dark); 
+      padding: 0.4rem 0.8rem; 
+      border-radius: 5px; 
+      transition: var(--transition); 
+    }
+    .speaker-link:hover { color: #fff; background: #8a6820; border-color: #8a6820; }
+
+    /* PACKAGES */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .package-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid #e8dfcf;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 15px 40px rgba(122,92,13,0.08);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+    .package-card:hover { transform: translateY(-10px); box-shadow: 0 25px 60px rgba(122,92,13,0.15); }
+    .package-card--featured {
+      border: 2px solid #c9a84c;
+      background: linear-gradient(to bottom, #fff, #fff9f0);
+    }
+    .package-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #c9a84c;
+      color: #081240;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: 0 5px 15px rgba(201,168,76,0.3);
+    }
+    .package-kicker { font-size: 0.8rem; font-weight: 600; color: #8a6820; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .package-name { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.2rem; }
+    .package-price { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; color: #7a5c0d; line-height: 1; margin-bottom: 0.2rem; }
+    .package-mxn { font-size: 0.9rem; color: var(--text-dark-mid); margin-bottom: 1rem; font-weight: 500; }
+    .package-value { font-size: 0.88rem; color: var(--text-dark-mid); margin-bottom: 0.45rem; }
+    .package-value strong { color: var(--text-dark); }
+    .package-saving { font-size: 0.82rem; color: #8a6820; background: #fff8e8; border: 1px solid #f0dfb2; padding: 0.55rem 0.8rem; border-radius: 6px; margin-bottom: 1.5rem; font-weight: 600; }
+    .package-validity { font-size: 0.8rem; color: #d97706; background: #fffbeb; padding: 0.5rem 1rem; border-radius: 6px; margin-bottom: 2rem; font-weight: 600; }
+    
+    .package-list { list-style: none; margin-bottom: 2.5rem; flex-grow: 1; }
+    .package-list li { 
+      font-size: 0.95rem; 
+      color: var(--text-dark-mid); 
+      padding: 0.8rem 0; 
+      border-bottom: 1px solid #f0eadd; 
+      display: flex;
+      gap: 0.8rem;
+    }
+    .package-list li::before { content: '✓'; color: #c9a84c; font-weight: 700; }
+    .package-list li:last-child { border-bottom: none; }
+    
+    .payment-note { font-size: 0.85rem; color: var(--text-dark-mid); font-style: italic; margin-bottom: 2rem; line-height: 1.6; }
+    .package-note { font-size: 0.9rem; color: var(--text-dark-mid); text-align: center; margin-top: 2rem; font-style: italic; }
+
+    /* PRICE LIST GRID */
+    .price-list-grid { display: grid; gap: 1rem; margin-bottom: 3rem; }
+    .price-list-item { 
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.5rem; 
+      background: rgba(255,255,255,0.03); 
+      border: 1px solid rgba(255,255,255,0.08); 
+      border-radius: 12px;
+      transition: var(--transition);
+    }
+    .price-list-item:hover { background: rgba(255,255,255,0.06); border-color: var(--gold-border); }
+    .price-list-item strong { font-size: 1.1rem; color: #fff; }
+    .price-list-item span { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--gold); }
+    .price-list-item small { display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+    /* EVENT CARDS */
+    .event-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .event-cards--single { grid-template-columns: minmax(300px, 1fr); }
+    .event-card { 
+      background: rgba(255,255,255,0.03); 
+      border: 1px solid rgba(255,255,255,0.1); 
+      border-radius: 15px; 
+      padding: 2.5rem; 
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .event-card:hover { border-color: var(--gold); background: rgba(255,255,255,0.05); }
+    .event-card::after { 
+      content: ''; 
+      position: absolute; 
+      top: 0; right: 0; 
+      width: 60px; height: 60px; 
+      background: linear-gradient(225deg, var(--gold-dim) 0%, transparent 70%); 
+    }
+    .event-card--ritual {
+      background: rgba(201,168,76,.07);
+      border-color: rgba(224,194,120,.42);
+    }
+    
+    .event-date-badge { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+    .event-city { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+    .event-state { font-size: 0.95rem; color: var(--text-on-dark); opacity: 0.7; margin-bottom: 0.5rem; }
+    .event-venue { font-size: 0.95rem; color: var(--text-on-dark); opacity: 0.7; margin-bottom: 2rem; }
+    .event-venue span { color: var(--gold-light); font-weight: 600; }
+    
+    .btn-event { 
+      display: block; 
+      background: var(--gold); 
+      color: var(--navy-deep); 
+      text-align: center; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      font-size: 0.95rem; 
+      font-weight: 700; 
+      transition: var(--transition); 
+      box-shadow: 0 4px 15px rgba(201,168,76,0.2);
+    }
+    .btn-event:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(201,168,76,0.3); }
+
+    .event-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0 1.25rem;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .event-divider::before,
+    .event-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--gold-border);
+    }
+    
+    .event-note { font-size: .9rem; color: var(--text-on-dark); opacity: 0.7; text-align: center; margin-top: 1.5rem; line-height: 1.6; }
+
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }
+    .faq-item { background: #fff; border: 1px solid var(--cream-dark); border-radius: 12px; overflow: hidden; transition: var(--transition); }
+    .faq-item:hover { border-color: var(--gold); }
+    .faq-q { 
+      width: 100%; 
+      padding: 1.5rem 2rem; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      background: none; 
+      border: none; 
+      text-align: left; 
+      font-size: 1.05rem; 
+      font-weight: 600; 
+      color: var(--text-dark); 
+      cursor: pointer; 
+      font-family: var(--sans);
+    }
+    .faq-icon { font-size: 1.5rem; color: var(--gold); transition: var(--transition); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { 
+      max-height: 0; 
+      overflow: hidden; 
+      padding: 0 2rem; 
+      color: var(--text-dark-mid); 
+      font-size: 0.95rem; 
+      line-height: 1.7; 
+      transition: all 0.4s ease; 
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.5rem; }
+    .faq-a a { color: #8a6820; text-decoration: underline; }
+
+    /* FINAL CTA */
+    .final-cta { 
+      padding: 8rem var(--px); 
+      text-align: center; 
+      background: linear-gradient(rgba(8,18,64,0.8), rgba(8,18,64,0.8)), url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+    }
+    .final-cta-title { font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1.5rem; }
+    .final-cta-title em { color: var(--gold); font-style: normal; }
+    .final-cta-sub { font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem; opacity: 0.9; }
+    .final-cta-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
+
+    /* FOOTER */
+    .footer { padding: 5rem var(--px) 3rem; background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    .footer-logo { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .footer-tagline { font-size: 0.9rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 3rem; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem; }
+    .footer-link { font-size: 0.9rem; color: var(--text-on-dark); opacity: 0.6; transition: var(--transition); }
+    .footer-link:hover { opacity: 1; color: var(--gold); }
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; }
+
+    /* Animations Custom Classes */
+    [data-aos] { transition-duration: 800ms !important; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-logo">
+      <img src="brand-mark.png" alt="Logo"/>
+      <span>Tu Código Evolutivo</span>
+    </div>
+    <a class="nav-cta" href="#paquetes">Gira México 2026</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+    <div class="inner">
+      <div class="hero-layout">
+        <div class="hero-content" data-aos="fade-right">
+          <span class="hero-eyebrow">Gira México · Agosto 2026</span>
+          <h1 class="hero-title">Tu Código <em>Evolutivo</em></h1>
+          <p class="hero-slogan">3 herramientas para entender la vida: <strong>Conócete, Comprende, Transforma.</strong></p>
+          <p class="hero-desc">Una experiencia vivencial diseñada para integrar Bioevolutiva Consciente, Código Sistémico y Tu Numerología Evolutiva en un solo proceso de transformación profunda.</p>
+          <div class="hero-ctas">
+            <a class="btn-primary" href="#paquetes">Ver paquetes promocionales</a>
+            <a class="btn-ghost" href="#registro">Ver calendario de eventos</a>
+          </div>
+        </div>
+        <div class="hero-logo-wrap" data-aos="fade-left" data-aos-delay="200">
+  <img class="hero-logo-img" src="gira-mexico-banner.png" alt="Tu Código Evolutivo · Gira México 2026" />
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- TEAM -->
+  <section class="section team-section">
+    <div class="team-inner">
+      <div class="team-photo-wrap" data-aos="zoom-in">
+        <img class="team-photo" src="equipo.png" alt="Aimée, Pilar y Zuly"/>
+      </div>
+      <div class="team-content" data-aos="fade-left">
+        <span class="eyebrow eyebrow--amber">Las Creadoras</span>
+        <h2 class="section-title section-title--light">Tres miradas, <em>un solo propósito</em></h2>
+        <p class="team-desc">Hemos unido nuestras trayectorias para ofrecerte un mapa claro hacia tu bienestar. Una integración de sabiduría ancestral y herramientas contemporáneas.</p>
+        <div class="team-names">
+<div class="team-name-item">
+  <div class="team-dot"></div>
+  <strong>Zuly Astrid Román Salazar</strong>
+  <span>Código Sistémico · Constelaciones familiares (Colombia)</span>
+</div>
+
+<div class="team-name-item">
+  <div class="team-dot"></div>
+  <strong>Pilar Fernández García</strong>
+  <span>Tu Numerología Evolutiva · Creadora del sistema (España)</span>
+</div>
+
+<div class="team-name-item">
+  <div class="team-dot"></div>
+  <strong>Luisa Aimée Flores Barbará</strong>
+  <span>Bioevolutiva Consciente · Numerología en el árbol familiar (México)</span>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section section--dark">
+    <div class="inner">
+      <span class="eyebrow">¿Qué lograrás?</span>
+      <h2 class="section-title">El impacto de tu <em>evolución</em></h2>
+      <p class="section-sub">Este no es solo un taller, es el inicio de una nueva forma de habitar tu realidad.</p>
+      
+      <div class="benefits-list">
+        <div class="benefit" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-marker">01</div>
+          <div class="benefit-body">
+            <strong>Claridad Personal</strong>
+            <p>Identifica los patrones repetitivos y las lealtades invisibles que frenan tu crecimiento actual.</p>
+          </div>
+        </div>
+        <div class="benefit" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-marker">02</div>
+          <div class="benefit-body">
+            <strong>Sanación Sistémica</strong>
+            <p>Ordena tu lugar en tu sistema familiar para liberar cargas que no te pertenecen y recuperar tu fuerza.</p>
+          </div>
+        </div>
+        <div class="benefit" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-marker">03</div>
+          <div class="benefit-body">
+            <strong>Propósito de Vida</strong>
+            <p>Descubre a través de tus números el mapa de ruta que tu alma trazó para esta encarnación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILES -->
+  <section class="section section--cream">
+    <div class="inner">
+      <span class="eyebrow eyebrow--amber">¿Para quién es?</span>
+      <h2 class="section-title section-title--light">Esta experiencia es <em>para ti si...</em></h2>
+      
+      <div class="profiles-grid">
+        <div class="profile-card" data-aos="flip-left" data-aos-delay="100">
+          <span class="profile-icon">🧭</span>
+          <p class="profile-text">Buscas respuestas profundas sobre tu historia familiar y cómo afecta tu presente.</p>
+        </div>
+        <div class="profile-card" data-aos="flip-left" data-aos-delay="200">
+          <span class="profile-icon">🌱</span>
+          <p class="profile-text">Deseas herramientas prácticas para transformar tu salud emocional y física.</p>
+        </div>
+        <div class="profile-card" data-aos="flip-left" data-aos-delay="300">
+          <span class="profile-icon">✨</span>
+          <p class="profile-text">Sientes que es momento de tomar las riendas de tu vida con consciencia plena.</p>
+        </div>
+        <div class="profile-card" data-aos="flip-left" data-aos-delay="400">
+          <span class="profile-icon">🤝</span>
+          <p class="profile-text">Quieres conectar con una comunidad de personas en tu misma sintonía evolutiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="paquetes" class="section team-section">
+    <div class="inner" style="max-width: 1100px;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow eyebrow--amber">Promociones Especiales</span>
+        <h2 class="section-title section-title--light">Elige tu <em>camino</em></h2>
+        <p class="section-sub section-sub--light" style="margin-left: auto; margin-right: auto;">Aprovecha los precios de preventa disponibles hasta el 31 de julio de 2026.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1 -->
+        <article class="package-card package-card--featured" data-aos="fade-up">
+          <div class="package-badge">Más Completo</div>
+          <div class="package-kicker">Paquete 1 · Presencial</div>
+          <h3 class="package-name">Evolución Integral</h3>
+          <div class="package-value">Valor de las experiencias por separado: <strong>510 EUR</strong></div>
+          <div class="package-price">369 EUR</div>
+          <div class="package-mxn">Aprox. $7,380 MXN</div>
+          <div class="package-saving">Beneficio al elegir el paquete: 141 EUR</div>
+          <div class="package-validity">Promoción vigente hasta el 31 de julio</div>
+          <ul class="package-list">
+            <li>Dos talleres presenciales: Naucalpan y San Andrés Cholula</li>
+            <li>Consulta de integración con las tres especialistas</li>
+            <li>Ritual de cierre en Teotihuacán</li>
+          </ul>
+          <p class="payment-note">Aparta tu lugar con un primer pago y liquida el saldo antes del 10 de agosto de 2026. El equipo te compartirá las opciones de pago al completar tu registro.</p>
+          <a class="btn-primary" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Solicitar Paquete 1 →</a>
+        </article>
+
+        <!-- Package 2 -->
+        <article class="package-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="package-kicker">Paquete 2 · Presencial</div>
+          <h3 class="package-name">Camino Esencial</h3>
+          <div class="package-value">Valor de las experiencias por separado: <strong>360 EUR</strong></div>
+          <div class="package-price">240 EUR</div>
+          <div class="package-mxn">Aprox. $4,800 MXN</div>
+          <div class="package-saving">Beneficio al elegir el paquete: 120 EUR</div>
+          <div class="package-validity">Promoción vigente hasta el 31 de julio</div>
+          <ul class="package-list">
+            <li>Un taller presencial a elegir</li>
+            <li>Consulta de integración con las tres especialistas</li>
+            <li>Ritual de cierre en Teotihuacán</li>
+          </ul>
+          <p class="payment-note">Aparta tu lugar con un primer pago y liquida el saldo antes del 10 de agosto de 2026. El equipo te compartirá las opciones de pago al completar tu registro.</p>
+          <a class="btn-primary" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Solicitar Paquete 2 →</a>
+        </article>
+
+        <!-- Package 3 -->
+        <article class="package-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="package-kicker">Paquete Online</div>
+          <h3 class="package-name">Evolución desde Casa</h3>
+          <div class="package-value">Valor de las experiencias por separado: <strong>470 EUR</strong></div>
+          <div class="package-price">350 EUR</div>
+          <div class="package-mxn">Aprox. $7,000 MXN</div>
+          <div class="package-saving">Beneficio al elegir el paquete: 120 EUR</div>
+          <div class="package-validity">Promoción vigente hasta el 31 de julio</div>
+          <ul class="package-list">
+            <li>Dos talleres online</li>
+            <li>Consulta online con las tres especialistas</li>
+            <li>Ritual online conectado con la experiencia de Teotihuacán</li>
+          </ul>
+          <p class="payment-note">Aparta tu lugar con un primer pago y liquida el saldo antes del 10 de agosto de 2026. El equipo te compartirá las opciones de pago al completar tu registro.</p>
+          <a class="btn-primary" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Solicitar paquete online →</a>
+        </article>
+      </div>
+      <p class="package-note">Al solicitar un paquete, el equipo organizador te contactará para confirmar disponibilidad, forma de pago y detalles de participación.</p>
+    </div>
+  </section>
+
+  <!-- REGISTRO -->
+  <section id="registro" class="section section--dark">
+    <div class="inner">
+      <span class="eyebrow">Experiencias Individuales</span>
+      <h2 class="section-title">Elige tu <em>experiencia</em></h2>
+      <p class="section-sub">También puedes reservar cada actividad por separado. Los paquetes promocionales se muestran en la sección anterior.</p>
+      
+      <div class="price-list-grid" data-aos="fade-up">
+        <div class="price-list-item">
+          <div><strong>Taller Presencial</strong><small>Por persona · jornada completa · precio internacional de referencia: 150 EUR</small></div>
+          <span>$2,997 MXN</span>
+        </div>
+        <div class="price-list-item">
+          <div><strong>Taller Online</strong><small>Aprox. $2,600 MXN · por persona</small></div>
+          <span>130 EUR</span>
+        </div>
+        <div class="price-list-item">
+          <div><strong>Consulta Individual</strong><small>Aprox. $2,400 MXN · por sesión</small></div>
+          <span>120 EUR</span>
+        </div>
+        <div class="price-list-item">
+          <div><strong>Constelación</strong><small>Aprox. $2,400 MXN · por sesión</small></div>
+          <span>120 EUR</span>
+        </div>
+        <div class="price-list-item">
+          <div><strong>Ritual en Teotihuacán</strong><small>No incluye entrada a la zona arqueológica</small></div>
+          <span>90 EUR</span>
+        </div>
+      </div>
+
+      <div class="event-cards">
+        <div class="event-card" data-aos="fade-right">
+          <span class="event-date-badge">15 de agosto · 10:00 – 18:00 h</span>
+          <h3 class="event-city">Naucalpan</h3>
+          <p class="event-state">Estado de México</p>
+          <p class="event-venue">Sede: <span>Café Guadalquivir</span></p>
+          <a class="btn-event" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Registrarme · Edo. de México →</a>
+        </div>
+        <div class="event-card" data-aos="fade-left">
+          <span class="event-date-badge">22 de agosto · 10:00 – 18:00 h</span>
+          <h3 class="event-city">San Andrés Cholula</h3>
+          <p class="event-state">Puebla</p>
+          <p class="event-venue">Sede: <span>Por confirmar</span></p>
+          <a class="btn-event" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Registrarme · Puebla →</a>
+        </div>
+      </div>
+
+      <div class="event-divider">
+        <span>Ritual Chamánico</span>
+      </div>
+
+      <div class="event-cards event-cards--single">
+        <div class="event-card event-card--ritual" data-aos="fade-up">
+          <span class="event-date-badge">29 de agosto · horario por confirmar</span>
+          <h3 class="event-city">Teotihuacán</h3>
+          <p class="event-state">Estado de México</p>
+          <p class="event-venue">Ritual de cierre: <span>90 EUR por persona · aprox. $1,800 MXN</span></p>
+          <p class="event-venue">Detalles: <span>horario y punto de encuentro por confirmar</span></p>
+          <a class="btn-event" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Registrarme · Teotihuacán →</a>
+        </div>
+      </div>
+      <p class="event-note">El registro no confirma tu lugar automáticamente. El equipo organizador te contactará para coordinar la forma de pago y los detalles finales.</p>
+    </div>
+  </section>
+
+  <!-- CONSULTAS -->
+  <section id="consultas" class="section section--deep">
+    <div class="inner">
+      <span class="eyebrow">Consulta Individual</span>
+      <h2 class="section-title">Agenda una <em>sesión personal</em></h2>
+      <p class="section-sub">Durante la semana previa a los eventos presenciales podrás solicitar una consulta individual con una de las creadoras.</p>
+      
+      <div class="event-card" data-aos="fade-up">
+        <span class="event-date-badge">Del 10 al 26 de agosto (Tentativamente)</span>
+        <h3 class="event-city">Consulta Individual</h3>
+        <p class="event-venue">Costo: <span>120 EUR por sesión · aprox. $2,400 MXN</span></p>
+        <p class="agenda-placeholder-text" style="text-align:left;margin-bottom:1.25rem;color:var(--text-muted)">Al completar el registro, el equipo organizador te contactará para confirmar disponibilidad, coordinar el pago y asignar día, hora y lugar de la cita.</p>
+        <a class="btn-event" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Solicitar Consulta Individual →</a>
+      </div>
+      
+      <div class="event-card" style="margin-top:2rem" data-aos="fade-up" data-aos-delay="100">
+        <span class="event-date-badge">Sesión Especializada</span>
+        <h3 class="event-city">Constelación Familiar</h3>
+        <p class="event-venue">Costo: <span>120 EUR por sesión · aprox. $2,400 MXN</span></p>
+        <p class="agenda-placeholder-text" style="text-align:left;margin-bottom:1.25rem;color:var(--text-muted)">Solicita disponibilidad y el equipo organizador te contactará para coordinar modalidad, fecha y forma de pago.</p>
+        <a class="btn-event" href="https://forms.gle/Jy6BRGzvCFu7FWRE9" target="_blank" rel="noopener">Solicitar Constelación →</a>
+      </div>
+    </div>
+  </section>
+
+<!-- CREADORAS · crema -->
+<section class="section section--cream">
+  <div class="inner" style="max-width: 1100px;">
+
+    <div style="text-align:center; margin-bottom:3rem;">
+      <p class="eyebrow eyebrow--amber">Las creadoras</p>
+
+      <h2 class="section-title section-title--light">
+        Conoce a quienes <em>integran Tu Código Evolutivo</em>
+      </h2>
+
+      <p class="section-sub section-sub--light"
+         style="margin-left:auto; margin-right:auto;">
+        Tres trayectorias, tres países y tres herramientas unidas
+        en una sola experiencia.
+      </p>
+    </div>
+
+    <div class="speakers-grid">
+
+      <!-- ZULY -->
+      <article class="speaker-card" data-aos="fade-up">
+
+        <img
+          class="speaker-avatar"
+          src="zuly.jpg"
+          alt="Zuly Astrid Román Salazar"
+        />
+
+        <h3 class="speaker-name">
+          Zuly Astrid Román Salazar
+        </h3>
+
+        <div class="speaker-role">
+          Código Sistémico · Constelaciones familiares
+        </div>
+
+        <div class="speaker-country">
+          Colombia
+        </div>
+
+        <p class="speaker-bio">
+          Creadora de Código Sistémico®, una herramienta de autoconocimiento
+          y transformación que integra genealogía, constelaciones familiares,
+          numerología evolutiva y principios de las leyes universales aplicadas
+          a las relaciones humanas.
+        </p>
+
+        <div class="speaker-links">
+          <a
+            class="speaker-link"
+            href="https://www.instagram.com/zulyroman.s/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram de Zuly Román"
+          >IG</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.facebook.com/ZUROSA"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook de Zuly Román"
+          >FB</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.youtube.com/@zulyroman8192"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube de Zuly Román"
+          >YT</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.tiktok.com/@zulyromans"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok de Zuly Román"
+          >TK</a>
+        </div>
+
+      </article>
+
+
+      <!-- PILAR -->
+      <article
+        class="speaker-card"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+
+        <img
+          class="speaker-avatar"
+          src="pilar.jpg"
+          alt="Pilar Fernández García"
+        />
+
+        <h3 class="speaker-name">
+          Pilar Fernández García
+        </h3>
+
+        <div class="speaker-role">
+          Tu Numerología Evolutiva · Creadora del sistema
+        </div>
+
+        <div class="speaker-country">
+          España
+        </div>
+
+        <p class="speaker-bio">
+          Creadora del sistema Tu Numerología Evolutiva, una herramienta
+          de autoconocimiento y despertar de conciencia que descifra el
+          código numérico personal para revelar propósito, lecciones,
+          talentos y camino evolutivo.
+        </p>
+
+        <div class="speaker-links">
+          <a
+            class="speaker-link"
+            href="https://www.instagram.com/pilarfernandeznumerologia/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram de Pilar Fernández"
+          >IG</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.facebook.com/pilarfernandezgarcia"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook de Pilar Fernández"
+          >FB</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.youtube.com/@pilarfernandezgarcia"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube de Pilar Fernández"
+          >YT</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.tiktok.com/@pilarfernandeznumerologa"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok de Pilar Fernández"
+          >TK</a>
+        </div>
+    
+      </article>
+
+
+      <!-- LUISA AIMÉE -->
+      <article
+        class="speaker-card"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+
+        <img
+          class="speaker-avatar"
+          src="aimee.jpg"
+          alt="Luisa Aimée Flores Barbará"
+        />
+
+        <h3 class="speaker-name">
+          Luisa Aimée Flores Barbará
+        </h3>
+
+        <div class="speaker-role">
+          Bioevolutiva Consciente · Numerología en el árbol familiar
+        </div>
+
+        <div class="speaker-country">
+          México
+        </div>
+
+        <p class="speaker-bio">
+          Creadora de Bioevolutiva Consciente, una herramienta de
+          transformación integral que une biodescodificación, numerología
+          evolutiva, visualizaciones creativas y metáforas para descifrar
+          y transformar aquello que bloquea a la persona.
+        </p>
+
+        <div class="speaker-links">
+          <a
+            class="speaker-link"
+            href="https://www.instagram.com/bioevolutivaconsciente"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram de Luisa Aimée Flores"
+          >IG</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.facebook.com/aimeefloresbio"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook de Luisa Aimée Flores"
+          >FB</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.youtube.com/@bioevolutivaconsciente"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube de Luisa Aimée Flores"
+          >YT</a>
+
+          <a
+            class="speaker-link"
+            href="https://www.tiktok.com/@bioevolutivaconsciente"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok de Luisa Aimée Flores"
+          >TK</a>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ -->
+  <section class="section section--cream">
+    <div class="inner">
+      <span class="eyebrow eyebrow--amber">Preguntas Frecuentes</span>
+      <h2 class="section-title section-title--light">Resolvemos tus <em>dudas</em></h2>
+      
+      <div class="faq-list">
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-q">¿Necesito experiencia previa en estas disciplinas? <span class="faq-icon">+</span></button>
+          <div class="faq-a">No. La jornada está diseñada para recibir tanto a quienes tienen años en su camino de autoconocimiento como a quienes llegan por primera vez. El proceso parte de donde estás tú.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-q">¿El taller se imparte en español? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Sí, íntegramente en español. Las tres facilitadoras son hispanohablantes — Colombia, España y México.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-q">¿Los cupos son limitados? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Sí. El formato es de grupo reducido para garantizar profundidad y atención personalizada. Una vez completos los lugares, se cierra el registro para esa fecha.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+          <button class="faq-q">¿Cómo funciona el pago? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Tras completar el formulario, el equipo organizador se pone en contacto contigo para confirmar disponibilidad y coordinar el pago. El registro por sí solo no reserva tu lugar.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-q">¿Puedo asistir a las dos fechas? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Sí. También puedes elegir el Paquete 1, que reúne los dos talleres presenciales, la consulta de integración con las tres especialistas y el ritual de cierre en Teotihuacán.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+          <button class="faq-q">¿Puedo agendar una consulta individual? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Sí. Las consultas individuales se realizarán la semana previa a los eventos presenciales. Primero completas el formulario de interés y después el equipo te contacta para coordinar pago, día, hora y lugar de la cita.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+          <button class="faq-q">¿El ritual de Teotihuacán incluye la entrada a la zona arqueológica? <span class="faq-icon">+</span></button>
+          <div class="faq-a">No. El costo del ritual de cierre es de 90 EUR por persona (aprox. $1,800 MXN) y no incluye la entrada al sitio arqueológico. El horario y los detalles finales están por confirmarse.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+          <button class="faq-q">¿Hasta cuándo están disponibles los paquetes promocionales? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Los paquetes especiales pueden solicitarse hasta el 31 de julio de 2026, sujetos a disponibilidad. Después de esa fecha, cada experiencia se ofrecerá con su precio individual.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+          <button class="faq-q">¿Qué incluye la consulta con las tres especialistas? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Es un espacio de integración en el que participan las tres creadoras de Tu Código Evolutivo. Al solicitar el paquete, el equipo confirmará modalidad, duración y dinámica exacta de la sesión.</div>
+        </div>
+        
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
+          <button class="faq-q">¿Hay eventos gratuitos antes del evento? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Sí. Puedes conocer el trabajo de Aimée, Pilar y Zuly en los encuentros en vivo gratuitos antes de la experiencia presencial. <a href="https://www.tucodigoevolutivo.com/webinars.html" target="_blank">Ver agenda de webinars →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="inner" data-aos="zoom-in">
+      <p class="eyebrow" style="text-align:center;margin-bottom:1rem;color:var(--gold)">Paquetes disponibles hasta el 31 de julio</p>
+      <h2 class="final-cta-title">Tu código <em>te está esperando</em></h2>
+      <p class="final-cta-sub">Elige la experiencia que mejor acompañe tu momento y permite que las tres miradas se integren en un solo proceso.</p>
+
+      <div class="final-cta-btns">
+        <a class="btn-primary" href="#paquetes">Ver paquetes promocionales →</a>
+        <a class="btn-primary" href="mailto:contacto@tucodigoevolutivo.com?subject=Información%20Gira%20México%202026">Escribir por correo →</a>
+      </div>
+
+      <div class="final-cta-btns" style="margin-top:.5rem">
+        <a class="btn-ghost" href="https://www.tucodigoevolutivo.com/webinars.html" style="color: #fff; border-color: rgba(255,255,255,0.3);">Ver webinars gratuitos antes de decidir</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Tu Código Evolutivo</div>
+    <div class="footer-tagline">Gira México 2026 · Código Sistémico · Tu Numerología Evolutiva · Bioevolutiva Consciente</div>
+    <div class="footer-links">
+      <a class="footer-link" href="https://www.instagram.com/tucodigoevolutivo/" target="_blank" rel="noopener">Instagram</a>
+      <a class="footer-link" href="https://www.facebook.com/profile.php?id=61590513938655" target="_blank" rel="noopener">Facebook</a>
+      <a class="footer-link" href="https://www.tiktok.com/@tucodigoevolutivo" target="_blank" rel="noopener">TikTok</a>
+      <a class="footer-link" href="https://www.youtube.com/@TuCodigoEvolutivo" target="_blank" rel="noopener">YouTube</a>
+      <a class="footer-link" href="https://www.tucodigoevolutivo.com/webinars.html">Webinars</a>
+      <a class="footer-link" href="https://www.tucodigoevolutivo.com/privacidad.html">Privacidad</a>
+      <a class="footer-link" href="mailto:contacto@tucodigoevolutivo.com">Contacto</a>
+    </div>
+    <div class="footer-copy">© 2026 Tu Código Evolutivo · Todos los derechos reservados</div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: true,
+      offset: 100,
+    });
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close other items
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
