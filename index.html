@@ -408,6 +408,8 @@
     .price-list-item strong { font-size: 1.1rem; color: #fff; }
     .price-list-item span { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--azul-accent); background: #fff; padding: 0.45rem 1.1rem; border-radius: 30px; display: inline-block; }
     .price-list-item small { display: block; font-size: 1rem; color: rgba(255,255,255,0.75); margin-top: 0.4rem; }
+    .price-capsule-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+    .price-vigencia-badge { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #fff; background: #1D6FB8; padding: 0.3rem 0.8rem; border-radius: 20px; white-space: nowrap; text-align: center; }
 
     /* EVENT CARDS */
     .event-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
@@ -712,7 +714,7 @@
           <h3 class="agenda-title">Yo conozco mi código evolutivo, ahora me reconozco</h3>
 
           <div class="agenda-block">
-            <p class="agenda-speaker-topic">Módulo 1 · Memorias que no recuerdas, huellas que no se borran</p>
+            <p class="agenda-speaker-topic">Memorias que no recuerdas, huellas que no se borran</p>
             <ul class="agenda-list">
               <li>Tu primer cableado: el cerebro de la supervivencia</li>
               <li>Tu lugar en el mundo: la química de la fratría</li>
@@ -722,7 +724,7 @@
           </div>
 
           <div class="agenda-block">
-            <p class="agenda-speaker-topic">Módulo 2 · Saber reconocerte a través de tus números</p>
+            <p class="agenda-speaker-topic">Saber reconocerte a través de tus números</p>
             <ul class="agenda-list">
               <li>¿Quién soy yo realmente? Mi identidad evolutiva</li>
               <li>Qué se esconde en cada número de tu fecha de nacimiento</li>
@@ -732,7 +734,7 @@
           </div>
 
           <div class="agenda-block">
-            <p class="agenda-speaker-topic">Módulo 3 · Tu árbol genealógico: un camino para reconocerte</p>
+            <p class="agenda-speaker-topic">Tu árbol genealógico: un camino para reconocerte</p>
             <ul class="agenda-list">
               <li>Quién eres realmente y quién aprendiste a ser</li>
               <li>Las lealtades invisibles que guían tu vida</li>
@@ -745,10 +747,36 @@
         <div class="agenda-card">
           <span class="agenda-date">22 de agosto · San Andrés Cholula</span>
           <img class="event-image-placeholder" src="taller-22-agosto.jpg" alt="Taller 15 de agosto — Naucalpan">
-          <h3 class="agenda-title">Saber comunicar es elegir, decidir y crear</h3>
+          <h3 class="agenda-title">Comunicación: La Palabra que Sana</h3>
 
           <div class="agenda-block">
-            <p class="agenda-placeholder-text">Temario en preparación — se agrega en cuanto esté confirmado.</p>
+            <p class="agenda-speaker-topic">Lo que tu clan calló y tu cerebro repite</p>
+            <ul class="agenda-list">
+              <li><strong>Lo heredado: el cerebro repite lo que el clan no resuelve.</strong> Cómo los patrones familiares no resueltos se convierten en programas mentales automáticos.</li>
+              <li><strong>Tu niño interior: la programación que dirige tu vida adulta.</strong> Identificando las heridas de la infancia que dictan tus reacciones y decisiones presentes.</li>
+              <li><strong>El silencio: cortisol, secretos y enfermedad.</strong> El impacto biológico de lo no dicho: cómo el silencio crónico genera estrés tóxico y somatizaciones.</li>
+              <li><strong>Tu nueva identidad: reprogramar, renombrar, recablear.</strong> Herramientas para reescribir las narrativas internas heredadas y construir una versión consciente de ti mismo.</li>
+            </ul>
+          </div>
+
+          <div class="agenda-block">
+            <p class="agenda-speaker-topic">Fórmula de las 9 áreas de tu vida</p>
+            <ul class="agenda-list">
+              <li><strong>Mi identidad auténtica, más allá de mis máscaras.</strong> El proceso de desidentificación del personaje para conectar con el ser esencial.</li>
+              <li><strong>Fórmula de las 9 áreas de tu vida.</strong> Diagnóstico y equilibrio de los pilares fundamentales: salud, dinero, amor, propósito, etc.</li>
+              <li><strong>Gestionar mis emociones con Numerología Evolutiva.</strong> La vibración numérica como mapa para comprender y trascender los bloqueos emocionales.</li>
+              <li><strong>Mis espejos más cercanos y mis propios miedos.</strong> El principio del espejo en las relaciones: lo que te molesta del otro, te habla de ti.</li>
+            </ul>
+          </div>
+
+          <div class="agenda-block">
+            <p class="agenda-speaker-topic">La Buena Comunicación</p>
+            <ul class="agenda-list">
+              <li><strong>¿Quién habla realmente cuando hablas?</strong> Distinguiendo si la voz que se expresa es la del adulto consciente, el niño herido o el eco del clan.</li>
+              <li><strong>Lo que más criticas… ¿es lo que aún no has integrado?</strong> La proyección como mecanismo de defensa: usando el juicio como brújula de crecimiento personal.</li>
+              <li><strong>El orden crea comunicación; el desorden crea conflicto.</strong> Claridad mental, orden emocional y su efecto directo en la calidad de tus vínculos.</li>
+              <li><strong>La paz comienza cuando comprendes.</strong> El cierre del ciclo: de la reacción inconsciente a la respuesta compasiva.</li>
+            </ul>
           </div>
         </div>
 
@@ -760,7 +788,7 @@
   <section id="portal" class="section" style="background: linear-gradient(135deg, var(--crema-claro) 0%, var(--lavanda) 60%, var(--crema-claro) 100%); padding-top: 3rem; padding-bottom: 3rem;">
     <div class="inner" style="text-align:center; max-width: 700px;">
       <span class="eyebrow" style="color: var(--magenta); font-size: 1.8rem; letter-spacing: .08em;">Promocion por tiempo limitado</span>
-      <h2 class="section-title section-title--light" style="margin-bottom: .5rem;">Precio <em>Portal</em></h2>
+      <h2 class="section-title section-title--light" style="margin-bottom: .5rem;">Precio <em>BRILLA YA</em></h2>
       <p class="section-sub section-sub--light" style="margin-left:auto;margin-right:auto; font-size: 1.25rem;">15% de descuento en talleres, consulta y paquetes. Valido del 24 al 31 de julio de 2026 unicamente.</p>
   </section>
   <!-- PROMO PRECIO PORTAL -- FIN -->
@@ -777,17 +805,23 @@
   <div class="price-list-item">
     <div>
       <strong>1 Taller</strong>
-      <small>Por persona · jornada completa · Precio Portal: $2,547 MXN / ~130 EUR (normal $2,997 MXN / ~150 EUR)</small>
+      <small>Por persona · jornada completa · Precio BRILLA YA: $2,547 MXN / ~130 EUR (normal $2,997 MXN / ~150 EUR)</small>
     </div>
-    <span>$2,547 MXN</span>
+    <div class="price-capsule-wrap">
+      <span class="price-vigencia-badge">Vigencia al 31 de julio</span>
+      <span>$2,547 MXN</span>
+    </div>
   </div>
 
   <div class="price-list-item">
     <div>
       <strong>2 Talleres</strong>
-      <small>Naucalpan + Cholula · Precio Portal: $4,247 MXN / ~215 EUR (normal $4,997 MXN / ~250 EUR)</small>
+      <small>Naucalpan + Cholula · Precio BRILLA YA: $4,247 MXN / ~215 EUR (normal $4,997 MXN / ~250 EUR)</small>
     </div>
-    <span>$4,247 MXN</span>
+    <div class="price-capsule-wrap">
+      <span class="price-vigencia-badge">Vigencia al 31 de julio</span>
+      <span>$4,247 MXN</span>
+    </div>
   </div>
 
   <div class="price-list-item">
@@ -871,7 +905,7 @@
       <div style="text-align: center; margin-bottom: 3rem;">
         <span class="eyebrow eyebrow--amber">Si prefieres ahorrar</span>
         <h2 class="section-title section-title--light">Nuestros <em>paquetes</em></h2>
-        <p class="section-sub section-sub--light" style="margin-left: auto; margin-right: auto;">Precios en pesos mexicanos y euros (referencia). Precio Portal vigente hasta el 31 de julio de 2026.</p>
+        <p class="section-sub section-sub--light" style="margin-left: auto; margin-right: auto;">Precios en pesos mexicanos y euros (referencia). Precio BRILLA YA vigente hasta el 31 de julio de 2026.</p>
       </div>
 
       <div class="packages-grid">
@@ -881,9 +915,9 @@
           <h3 class="package-name">Los dos talleres, la consulta y el ritual</h3>
           <div class="package-value">Precio normal: <strong>$7,497 MXN</strong> / ~375 EUR</div>
           <div class="package-price">$6,397 MXN</div>
-          <div class="package-mxn">Precio Portal - referencia internacional: ~320 EUR</div>
+          <div class="package-mxn">Precio BRILLA YA - referencia internacional: ~320 EUR</div>
           <div class="package-saving">Ahorras $1,100 MXN</div>
-          <div class="package-validity">Precio Portal vigente hasta el 31 de julio de 2026</div>
+          <div class="package-validity">Precio BRILLA YA vigente hasta el 31 de julio de 2026</div>
           <ul class="package-list">
             <li>Taller presencial en Naucalpan, Estado de Mexico (15 ago)</li>
             <li>Taller presencial en San Andres Cholula, Puebla (22 ago)</li>
@@ -901,9 +935,9 @@
           <h3 class="package-name">Un taller a elegir + ritual + consulta</h3>
           <div class="package-value">Precio normal: <strong>$9,497 MXN</strong> / ~480 EUR</div>
           <div class="package-price">$8,097 MXN</div>
-          <div class="package-mxn">Precio Portal - referencia internacional: ~410 EUR</div>
+          <div class="package-mxn">Precio BRILLA YA - referencia internacional: ~410 EUR</div>
           <div class="package-saving">Ahorras $1,400 MXN</div>
-          <div class="package-validity">Precio Portal vigente hasta el 31 de julio de 2026</div>
+          <div class="package-validity">Precio BRILLA YA vigente hasta el 31 de julio de 2026</div>
           <ul class="package-list">
             <li>Un taller presencial a elegir: Naucalpan o Cholula</li>
             <li>Ritual de cierre en Teotihuacan</li>
@@ -959,7 +993,7 @@
               <td class="compare-price">$7,497</td>
             </tr>
             <tr>
-              <td>Precio Portal</td>
+              <td>Precio BRILLA YA</td>
               <td class="compare-price">$2,547</td>
               <td class="compare-price">$4,247</td>
               <td class="compare-price">$8,097</td>
@@ -1237,7 +1271,7 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="inner" data-aos="zoom-in">
-      <p class="eyebrow" style="text-align:center;margin-bottom:1rem;color:var(--gold)">Precio Portal vigente hasta el 31 de julio</p>
+      <p class="eyebrow" style="text-align:center;margin-bottom:1rem;color:var(--gold)">Precio BRILLA YA vigente hasta el 31 de julio</p>
       <h2 class="final-cta-title">Tu código <em>te está esperando</em></h2>
       <p class="final-cta-sub">Elige la experiencia que mejor acompañe tu momento y permite que las dos miradas se integren en un solo proceso.</p>
 
