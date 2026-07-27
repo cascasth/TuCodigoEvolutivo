@@ -411,6 +411,18 @@
     .price-capsule-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
     .price-vigencia-badge { font-family: var(--sans); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #1D6FB8; background: none; text-align: center; white-space: nowrap; }
 
+    .deposit-toggle { max-width: 480px; margin: 0 auto 2.5rem; }
+    .deposit-toggle summary { cursor: pointer; list-style: none; text-align: center; background: linear-gradient(135deg, var(--azul-deep), var(--azul)); color: #fff; font-weight: 700; font-size: 0.9rem; padding: 0.9rem 1.5rem; border-radius: 30px; transition: var(--transition); }
+    .deposit-toggle summary::-webkit-details-marker { display: none; }
+    .deposit-toggle summary::marker { content: ''; }
+    .deposit-toggle summary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.2); }
+    .deposit-toggle summary::after { content: '▾'; margin-left: 0.5rem; }
+    .deposit-toggle[open] summary::after { content: '▴'; }
+    .deposit-card { margin-top: 1rem; background: #fff; border-radius: 16px; padding: 1.5rem 1.75rem; box-shadow: 0 15px 40px rgba(0,0,0,0.15); text-align: left; }
+    .deposit-card p { color: var(--text-dark-mid); font-size: 0.92rem; margin-bottom: 0.5rem; line-height: 1.5; }
+    .deposit-card p:last-child { margin-bottom: 0; }
+    .deposit-card strong { color: var(--text-dark); }
+
     /* EVENT CARDS */
     .event-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .event-cards--single { grid-template-columns: minmax(300px, 1fr); }
@@ -842,7 +854,18 @@
 
 </div>
       </div>
-      <p class="event-note" style="margin-top:-1rem;margin-bottom:2.5rem;">Precios para Mexico en moneda nacional. Los importes en euros se muestran como referencia aproximada para pagos internacionales.</p>
+      <p class="event-note" style="margin-top:-1rem;margin-bottom:1.5rem;">Precios para Mexico en moneda nacional. Los importes en euros se muestran como referencia aproximada para pagos internacionales.</p>
+
+      <details class="deposit-toggle">
+        <summary>Ver datos para depósito / transferencia</summary>
+        <div class="deposit-card">
+          <p><strong>CLABE:</strong> 722969010339666139</p>
+          <p><strong>Tarjeta de débito:</strong> 5428780835185224</p>
+          <p><strong>Beneficiario:</strong> Luisa Aimee Flores Barbara</p>
+          <p><strong>Institución:</strong> Mercado Pago W</p>
+          <p><strong>Celular:</strong> 5545229055</p>
+        </div>
+      </details>
 
       <div class="event-cards">
         <div class="event-card" data-aos="fade-right">
@@ -1004,6 +1027,17 @@
       </div>
 
       <p class="package-note">Precios para Mexico en moneda nacional. Los importes en euros se muestran como referencia aproximada para pagos internacionales; son precios fijos y no estan sujetos a conversion automatica por tipo de cambio. Al solicitar un paquete, el equipo organizador te contactara para confirmar disponibilidad, forma de pago y detalles de participacion.</p>
+
+      <details class="deposit-toggle" style="margin-top: 2rem;">
+        <summary>Ver datos para depósito / transferencia</summary>
+        <div class="deposit-card">
+          <p><strong>CLABE:</strong> 722969010339666139</p>
+          <p><strong>Tarjeta de débito:</strong> 5428780835185224</p>
+          <p><strong>Beneficiario:</strong> Luisa Aimee Flores Barbara</p>
+          <p><strong>Institución:</strong> Mercado Pago W</p>
+          <p><strong>Celular:</strong> 5545229055</p>
+        </div>
+      </details>
     </div>
   </section>
 
