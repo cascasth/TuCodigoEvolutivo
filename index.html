@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Código Evolutivo · Gira México 2026</title>
+  <meta name="description" content="Revive la Gira México 2026 de Tu Código Evolutivo: grabaciones de los webinars, encuentros en vivo, las creadoras Pilar Fernández y Aimée Flores, y tu regalo descargable." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.tucodigoevolutivo.com/" />
+  <link rel="icon" href="brand-mark.png" />
+
+  <meta property="og:title" content="Tu Código Evolutivo · Gira México 2026" />
+  <meta property="og:description" content="Grabaciones, encuentros en vivo, las creadoras y tu regalo descargable — todo lo que dejó la Gira México 2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tucodigoevolutivo.com/" />
+  <meta property="og:image" content="https://www.tucodigoevolutivo.com/gira2026.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --azul: #7ca7e8;
+      --azul-deep: #5a89d6;
+      --azul-dim: rgba(124,167,232,0.12);
+      --azul-border: rgba(124,167,232,0.35);
+      --rosa: #f88fd8;
+      --rosa-deep: #e56fc4;
+      --magenta: #E20DAF;
+      --lavanda: #FBD4F8;
+      --btn-bg: #fff0a9;
+      --btn-bg-hover: #ffe580;
+      --btn-text: #33507a;
+      --azul-accent: #0b95ea;
+      --azul-rey: #16357A;
+      --crema: #FCF7EE;
+      --crema-claro: #FBEFCE;
+      --navy: var(--azul);
+      --navy-deep: var(--azul-deep);
+      --navy-mid: #6b96de;
+      --gold: var(--rosa);
+      --gold-light: var(--rosa-deep);
+      --gold-dim: rgba(248,143,216,0.12);
+      --gold-border: rgba(248,143,216,0.35);
+      --cream: var(--crema);
+      --cream-dark: var(--crema-claro);
+      --white: #ffffff;
+      --text-on-dark: rgba(255,255,255,0.92);
+      --text-muted: rgba(255,255,255,0.6);
+      --text-dark: #33507a;
+      --text-dark-mid: rgba(51,80,122,0.68);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --max: 840px;
+      --px: clamp(1.25rem, 5vw, 2.5rem);
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); font-size: 16px; line-height: 1.65; background: var(--navy-deep); color: var(--text-on-dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--navy-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem var(--px); background: rgba(8,18,64,0.8); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.08); transition: var(--transition); }
+    .nav-logo { display: flex; align-items: center; gap: .8rem; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: #fff; }
+    .nav-logo img { width: 28px; height: 28px; filter: drop-shadow(0 0 5px rgba(52,156,250,0.5)); }
+    .nav-links { display: flex; align-items: center; gap: 1.1rem; margin-left: auto; margin-right: 1.2rem; }
+    .nav-link { font-size: 0.85rem; font-weight: 500; color: var(--text-on-dark); opacity: 0.75; transition: var(--transition); }
+    .nav-link:hover { opacity: 1; color: var(--gold); }
+    .nav-cta { background: var(--btn-bg); color: var(--btn-text); font-size: 0.82rem; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 8px; transition: var(--transition); white-space: nowrap; }
+    .nav-cta:hover { background: var(--btn-bg-hover); }
+    @media (max-width: 860px) { .nav-links { display: none; } }
+    @media (max-width: 480px) { .nav-logo span { display: none; } }
+
+    /* HERO */
+    .hero { position: relative; padding: clamp(7rem, 14vw, 10rem) var(--px) clamp(4rem, 9vw, 6rem); background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, var(--navy-deep) 100%); overflow: hidden; }
+    .hero-shape { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.35; pointer-events: none; }
+    .shape-1 { width: 420px; height: 420px; background: var(--rosa); top: -140px; right: -100px; }
+    .shape-2 { width: 340px; height: 340px; background: var(--azul-accent); bottom: -120px; left: -100px; }
+    .hero .inner { position: relative; max-width: 1100px; margin: 0 auto; z-index: 1; }
+    .hero-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+    @media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; text-align: center; } }
+    .hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: block; }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; line-height: 1.08; color: #fff; margin-bottom: 1.5rem; }
+    .hero-title em { color: var(--gold); font-style: italic; font-weight: 600; }
+    .hero-desc { font-size: 1.05rem; color: var(--text-on-dark); opacity: 0.85; max-width: 520px; margin-bottom: 2rem; line-height: 1.75; }
+    @media (max-width: 900px) { .hero-desc { margin-left: auto; margin-right: auto; } }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 900px) { .hero-ctas { justify-content: center; } }
+    .hero-visual img { border-radius: 22px; box-shadow: 0 30px 60px rgba(0,0,0,0.35); }
+
+    .btn-primary { background: var(--btn-bg); color: var(--btn-text); font-size: 0.95rem; font-weight: 600; padding: 1rem 2.2rem; border-radius: 8px; letter-spacing: .03em; transition: var(--transition); display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(52,156,250,0.25); }
+    .btn-primary:hover { background: var(--btn-bg-hover); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(52,156,250,0.35); }
+    .btn-ghost { border: 2px solid var(--gold-border); color: var(--gold); font-size: 0.95rem; font-weight: 600; padding: 1rem 2.2rem; border-radius: 8px; transition: var(--transition); display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-ghost:hover { background: var(--gold-dim); border-color: var(--gold); transform: translateY(-3px); }
+
+    /* SECTION BASE */
+    .section { padding: clamp(5rem, 12vw, 8rem) var(--px); position: relative; }
+    .inner { max-width: var(--max); margin: 0 auto; }
+    .section--dark  { background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 100%); }
+    .section--cream { background: var(--cream); }
+    .eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--azul-rey); margin-bottom: 1rem; display: block; }
+    .eyebrow--light { color: var(--gold); }
+    .section-title { font-family: var(--serif); font-size: clamp(2.1rem, 5vw, 3rem); font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 1rem; }
+    .section-title em { color: var(--azul-rey); font-style: normal; }
+    .section-title--light { color: var(--text-dark); }
+    .section-title--light em { color: #E20DAF; }
+    .section-sub { font-size: 1.05rem; color: var(--text-on-dark); opacity: 0.8; margin-bottom: 3rem; max-width: 620px; line-height: 1.7; }
+    .section-sub--light { color: var(--text-dark-mid); opacity: 1; }
+
+    /* COLLAGE — marco digital */
+    .collage-frame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .collage-slot { position: relative; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.3); background: rgba(255,255,255,0.05); }
+    .collage-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.7s ease; }
+    @media (max-width: 780px) { .collage-frame { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; } }
+    .collage-note { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 1.5rem; }
+
+    /* MEDIA CARDS (grabaciones) */
+    .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; margin-top: 3rem; }
+    .media-card { background: var(--white); border: 1px solid var(--cream-dark); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition); display: flex; flex-direction: column; }
+    .media-card:hover { transform: translateY(-10px); box-shadow: 0 22px 45px rgba(52,156,250,0.18); }
+    .media-thumb { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: var(--cream-dark); }
+    .media-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .media-body { padding: 1.6rem 1.6rem 1.9rem; text-align: left; display: flex; flex-direction: column; flex: 1; }
+    .media-tag { align-self: flex-start; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #1D6FB8; background: var(--azul-dim); padding: 0.32rem 0.75rem; border-radius: 20px; margin-bottom: 0.9rem; }
+    .media-body h3 { font-family: var(--serif); font-size: 1.35rem; color: var(--text-dark); margin-bottom: 0.5rem; line-height: 1.2; }
+    .media-desc { font-size: 0.88rem; color: var(--text-dark-mid); line-height: 1.6; margin-bottom: 1rem; }
+    .media-meta { font-size: 0.8rem; color: var(--text-dark-mid); margin-bottom: 1.2rem; }
+    .media-meta strong { color: var(--text-dark); }
+    .media-body .btn-primary { margin-top: auto; align-self: flex-start; padding: 0.7rem 1.4rem; font-size: 0.85rem; }
+
+    /* SPEAKERS */
+    .speakers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 2rem; margin-top: 3rem; }
+    .speaker-card { background: var(--white); border: 1px solid var(--cream-dark); border-radius: 15px; padding: 2.5rem 2rem; text-align: center; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .speaker-card:hover { transform: translateY(-12px); border-color: var(--rosa); box-shadow: 0 20px 45px rgba(52,156,250,0.18); }
+    .speaker-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 3px solid var(--rosa); padding: 3px; background: #fff; }
+    .speaker-name { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .speaker-role { font-size: 0.85rem; font-weight: 600; color: #1D6FB8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .speaker-country { font-size: 0.85rem; color: var(--text-dark-mid); margin-bottom: 1.2rem; }
+    .speaker-bio { font-size: 0.9rem; color: var(--text-dark-mid); line-height: 1.7; text-align: left; margin-bottom: 1.5rem; }
+    .speaker-links { display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; }
+    .speaker-link { font-size: 0.75rem; font-weight: 600; color: var(--text-dark-mid); border: 1px solid var(--cream-dark); padding: 0.4rem 0.8rem; border-radius: 5px; transition: var(--transition); }
+    .speaker-link:hover { color: #fff; background: #1D6FB8; border-color: #1D6FB8; }
+
+    /* GIFT */
+    .gift-box { background: #fff; border-radius: 20px; padding: 2.75rem 2.25rem; box-shadow: 0 15px 40px rgba(52,156,250,0.1); max-width: 640px; margin: 0 auto; text-align: center; }
+    .gift-box h2 { font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 2.2rem); color: var(--text-dark); margin-bottom: 0.9rem; }
+    .gift-box p { color: var(--text-dark-mid); margin-bottom: 1rem; font-size: 0.98rem; line-height: 1.65; }
+    .gift-box .btn-primary { margin-top: 1rem; }
+
+    /* TESTIMONIOS */
+    .social-proof { background: linear-gradient(155deg, var(--lavanda) 0%, var(--crema-claro) 100%); padding-top: clamp(4rem, 9vw, 6rem); padding-bottom: clamp(4rem, 9vw, 6rem); text-align: center; }
+    .social-proof .inner { max-width: 960px; }
+    .marquee-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); margin-bottom: 1rem; }
+    .marquee-track { display: flex; gap: 1.25rem; width: max-content; animation: marquee-scroll 34s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-card { flex: 0 0 auto; width: 280px; background: #fff; border-radius: 14px; padding: 1.25rem 1.5rem; box-shadow: 0 10px 25px rgba(52,156,250,0.1); text-align: left; }
+    .marquee-quote { font-style: italic; color: var(--text-dark-mid); font-size: 0.92rem; line-height: 1.55; }
+    .marquee-quote::before { content: '\201C'; color: var(--rosa); font-size: 1.4rem; font-weight: 700; margin-right: 2px; }
+    @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .testimonio-note { font-size: 0.82rem; color: var(--text-dark-mid); margin-bottom: 2.5rem; }
+
+    /* SOCIAL LINKS */
+    .social-links-row { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .social-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.3rem; border-radius: 30px; background: #fff; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; box-shadow: 0 6px 18px rgba(52,156,250,0.1); transition: var(--transition); }
+    .social-pill:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(52,156,250,0.18); }
+
+    /* FOOTER */
+    .footer { padding: 5rem var(--px) 3rem; background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+    .footer-logo { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .footer-tagline { font-size: 0.9rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 3rem; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem; }
+    .footer-link { font-size: 0.9rem; color: var(--text-on-dark); opacity: 0.6; transition: var(--transition); }
+    .footer-link:hover { opacity: 1; color: var(--gold); }
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a class="nav-logo" href="#inicio" aria-label="Ir al inicio">
+      <img src="brand-mark.png" alt="Logo de Tu Código Evolutivo"/>
+      <span>Tu Código Evolutivo</span>
+    </a>
+    <div class="nav-links" aria-label="Navegación principal">
+      <a class="nav-link" href="#grabaciones">Grabaciones</a>
+      <a class="nav-link" href="#creadoras">Creadoras</a>
+      <a class="nav-link" href="#testimonios">Testimonios</a>
+    </div>
+    <a class="nav-cta" href="#regalo">Recibe tu regalo →</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+    <div class="inner">
+      <div class="hero-layout">
+        <div class="hero-content" data-aos="fade-right">
+          <span class="hero-eyebrow">Gira México 2026 · Gracias por vivirla</span>
+          <h1 class="hero-title">Un código que ya <em>quedó sembrado</em></h1>
+          <p class="hero-desc">La Gira México 2026 de Tu Código Evolutivo ya se vivió: talleres presenciales, rituales, charlas y encuentros en vivo con Pilar Fernández y Aimée Flores. Aquí puedes revivir las grabaciones, conocer más de las creadoras y descargar tu material de regalo.</p>
+          <div class="hero-ctas">
+            <a class="btn-primary" href="#grabaciones">Ver grabaciones →</a>
+            <a class="btn-ghost" href="#creadoras">Conocer a las creadoras</a>
+          </div>
+        </div>
+        <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+          <img src="gira2026.jpg" alt="Gira México 2026 · Tu Código Evolutivo" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- COLLAGE -->
+  <section class="section section--cream">
+    <div class="inner">
+      <span class="eyebrow">Recuerdos</span>
+      <h2 class="section-title section-title--light">Momentos de la <em>Gira México</em></h2>
+      <p class="section-sub section-sub--light">Talleres, rituales y charlas — un vistazo a lo que se vivió en cada encuentro.</p>
+
+      <div class="collage-frame" data-aos="fade-up">
+        <div class="collage-slot"><img src="taller-15-agosto.jpg" alt="Foto del evento Tu Código Evolutivo" /></div>
+        <div class="collage-slot"><img src="charla-cafe-satelite.jpg" alt="Foto del evento Tu Código Evolutivo" /></div>
+        <div class="collage-slot"><img src="ritual-inicio-trabajos-puebla.jpg" alt="Foto del evento Tu Código Evolutivo" /></div>
+      </div>
+      <p class="collage-note">La galería cambia sola — dale un momento y verás pasar más fotos del evento.</p>
+    </div>
+  </section>
+
+  <!-- WEBINARS / GRABACIONES -->
+  <section id="grabaciones" class="section section--dark">
+    <div class="inner">
+      <span class="eyebrow eyebrow--light">Agenda cumplida</span>
+      <h2 class="section-title">Webinars para mirar tu historia con otro <em style="color:var(--gold); font-style:italic;">mapa</em></h2>
+      <p class="section-sub">Los tres encuentros en vivo que abrieron el camino a la Gira México — disponibles en YouTube.</p>
+
+      <div class="media-grid">
+        <article class="media-card" data-aos="fade-up">
+          <div class="media-thumb"><img src="webinar-mapa.png" alt="Webinar El mapa que ordena tu caos"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>El mapa que ordena tu caos</h3>
+            <p class="media-desc">Un encuentro para mirar lo que parece enredo interno desde una lectura más clara: historia, patrones, dirección y propósito.</p>
+            <p class="media-meta"><strong>Con:</strong> Aimée Flores, Pilar Fernández y Zuly Román</p>
+            <a class="btn-primary" href="https://youtu.be/tC4rJPSxuoo?si=X_LaBr6m6mn4Tm5e" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+
+        <article class="media-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="media-thumb"><img src="webinar-improvisar.png" alt="Webinar Deja de improvisar tu evolución"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>Deja de improvisar tu evolución</h3>
+            <p class="media-desc">Un espacio para reconocer cómo tu genealogía, numerología y sanación transgeneracional pueden ayudarte a comprender tu camino con más conciencia.</p>
+            <p class="media-meta"><strong>Con:</strong> Aimée Flores, Pilar Fernández y Zuly Román</p>
+            <a class="btn-primary" href="https://youtube.com/live/wcXYKjySJ_8?feature=share" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+
+        <article class="media-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="media-thumb"><img src="webinar-vida.png" alt="Webinar La vida no necesita otra copia, te necesita a ti"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>La vida no necesita otra copia, te necesita a ti</h3>
+            <p class="media-desc">Una invitación a sanar tu historia, honrar tu linaje y crear un futuro con más libertad, desde una mirada profunda y amorosa.</p>
+            <p class="media-meta"><strong>Con:</strong> Aimée Flores, Pilar Fernández y Zuly Román</p>
+            <a class="btn-primary" href="https://youtube.com/live/kXX7mxYxrEg" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTROS EN VIVO -->
+  <section id="otros-en-vivo" class="section section--cream">
+    <div class="inner">
+      <span class="eyebrow">Extra</span>
+      <h2 class="section-title section-title--light">Otros <em>encuentros en vivo</em></h2>
+      <p class="section-sub section-sub--light">La serie "Comprende el origen", con Pilar y Aimée.</p>
+
+      <div class="media-grid">
+        <article class="media-card" data-aos="fade-up">
+          <div class="media-thumb"><img src="consciencia-vivo-1.jpg" alt="Comprende el origen 1"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>Comprende el origen 1</h3>
+            <p class="media-desc">Primer encuentro en vivo de la serie "Comprende el origen".</p>
+            <p class="media-meta"><strong>Con:</strong> Pilar Fernández y Aimée Flores</p>
+            <a class="btn-primary" href="https://www.youtube.com/watch?v=_4CJ7fQg4KA" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+
+        <article class="media-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="media-thumb"><img src="consciencia-vivo-2.jpg" alt="Comprende el origen 2"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>Comprende el origen 2</h3>
+            <p class="media-desc">Segundo encuentro en vivo de la serie "Comprende el origen".</p>
+            <p class="media-meta"><strong>Con:</strong> Pilar Fernández y Aimée Flores</p>
+            <a class="btn-primary" href="https://www.youtube.com/watch?v=u4npS5YzH4U" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+
+        <article class="media-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="media-thumb"><img src="consciencia-vivo-3.jpg" alt="Comprende el origen 3"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>Comprende el origen 3</h3>
+            <p class="media-desc">Tercer encuentro en vivo de la serie "Comprende el origen".</p>
+            <p class="media-meta"><strong>Con:</strong> Pilar Fernández y Aimée Flores</p>
+            <a class="btn-primary" href="https://www.youtube.com/watch?v=1JvGJv8ydKQ" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+
+        <article class="media-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="media-thumb"><img src="en-vivo-origen.jpg" alt="Comprende el origen de lo que estás viviendo"></div>
+          <div class="media-body">
+            <span class="media-tag">Grabación disponible</span>
+            <h3>Comprende el origen de lo que estás viviendo</h3>
+            <p class="media-desc">Encuentro en vivo con Pilar y Aimée para conectar lo que se vive hoy con su origen y comprenderlo con más claridad.</p>
+            <p class="media-meta"><strong>Con:</strong> Pilar Fernández y Aimée Flores</p>
+            <a class="btn-primary" href="https://youtube.com/live/hjSdVq98K08?feature=share" target="_blank" rel="noopener">Ver en YouTube</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREADORAS -->
+  <section id="creadoras" class="section section--cream" style="background:var(--crema-claro);">
+    <div class="inner" style="max-width: 1100px;">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <p class="eyebrow">Las creadoras</p>
+        <h2 class="section-title section-title--light">Conoce a quienes <em>integran Tu Código Evolutivo</em></h2>
+        <p class="section-sub section-sub--light" style="margin-left:auto; margin-right:auto;">Dos trayectorias, dos países y una sola experiencia integrada.</p>
+      </div>
+
+      <div class="speakers-grid">
+        <article class="speaker-card" data-aos="fade-up" data-aos-delay="100">
+          <img class="speaker-avatar" src="pilar.jpg" alt="Pilar Fernández García" />
+          <h3 class="speaker-name">Pilar Fernández García</h3>
+          <div class="speaker-role">Tu Numerología Evolutiva · Creadora del sistema</div>
+          <div class="speaker-country">España</div>
+          <p class="speaker-bio">Creadora del sistema Tu Numerología Evolutiva, una herramienta de autoconocimiento y despertar de conciencia que descifra el código numérico personal para revelar propósito, lecciones, talentos y camino evolutivo.</p>
+          <div class="speaker-links">
+            <a class="speaker-link" href="https://www.instagram.com/pilarfernandeznumerologia/" target="_blank" rel="noopener" aria-label="Instagram de Pilar Fernández">IG</a>
+            <a class="speaker-link" href="https://www.facebook.com/pilarfernandezgarcia" target="_blank" rel="noopener" aria-label="Facebook de Pilar Fernández">FB</a>
+            <a class="speaker-link" href="https://www.youtube.com/@pilarfernandezgarcia" target="_blank" rel="noopener" aria-label="YouTube de Pilar Fernández">YT</a>
+            <a class="speaker-link" href="https://www.tiktok.com/@pilarfernandeznumerologa" target="_blank" rel="noopener" aria-label="TikTok de Pilar Fernández">TK</a>
+          </div>
+        </article>
+
+        <article class="speaker-card" data-aos="fade-up" data-aos-delay="200">
+          <img class="speaker-avatar" src="aimee.jpg" alt="Luisa Aimée Flores Barbará" />
+          <h3 class="speaker-name">Luisa Aimée Flores Barbará</h3>
+          <div class="speaker-role">Bioevolutiva Consciente · Numerología en el árbol familiar</div>
+          <div class="speaker-country">México</div>
+          <p class="speaker-bio">Creadora de Bioevolutiva Consciente, una herramienta de transformación integral que une biodescodificación, numerología evolutiva, visualizaciones creativas y metáforas para descifrar y transformar aquello que bloquea a la persona.</p>
+          <div class="speaker-links">
+            <a class="speaker-link" href="https://www.instagram.com/bioevolutivaconsciente" target="_blank" rel="noopener" aria-label="Instagram de Luisa Aimée Flores">IG</a>
+            <a class="speaker-link" href="https://www.facebook.com/aimeefloresbio" target="_blank" rel="noopener" aria-label="Facebook de Luisa Aimée Flores">FB</a>
+            <a class="speaker-link" href="https://www.youtube.com/@bioevolutivaconsciente" target="_blank" rel="noopener" aria-label="YouTube de Luisa Aimée Flores">YT</a>
+            <a class="speaker-link" href="https://www.tiktok.com/@bioevolutivaconsciente" target="_blank" rel="noopener" aria-label="TikTok de Luisa Aimée Flores">TK</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGALO -->
+  <section id="regalo" class="section section--dark">
+    <div class="inner">
+      <div class="gift-box" data-aos="zoom-in">
+        <span class="eyebrow eyebrow--light">Material complementario</span>
+        <h2>Recibe el regalo práctico de Tu Código Evolutivo</h2>
+        <p>Gracias por ser parte de nuestros webinars gratuitos. Preparamos un material práctico en PDF para ayudarte a integrar lo compartido en estos encuentros.</p>
+        <p>Responde este formulario breve y al finalizar encontrarás el enlace de descarga.</p>
+        <a class="btn-primary" href="https://forms.gle/hBk6DugQ59RYrPo98" target="_blank" rel="noopener">Responder formulario y recibir material</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="social-proof">
+    <div class="inner">
+      <span class="eyebrow" style="color: var(--rosa);">Lo que dicen de nosotras</span>
+      <h2 class="section-title section-title--light">Voces de nuestra <em>comunidad</em></h2>
+      <p class="section-sub section-sub--light" style="margin-left:auto;margin-right:auto;">Comentarios reales de quienes ya han vivido Tu Numerología Evolutiva y Bioevolutiva Consciente en nuestros encuentros.</p>
+
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <div class="marquee-card"><p class="marquee-quote">ORO PURO! eternamente agradecida. Bendiciones almas en evolución. Gracias gracias gracias.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">Buenos días, gracias por sus experiencias de vida, bendiciones.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">La Numerología evolutiva de Pilar Fernández García TE CAMBIA LA VIDA PARA SER TU MEJOR VERSIÓN.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">Yo les quiero dar mi testimonio: desde que he comenzado a trabajar en el entendimiento de mi camino, he comenzado a sanar mi cuerpo. Hoy estoy convencida de que voy en el camino correcto.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">Agradezco enormemente ser parte del grupo de Aimée y que he podido tener acceso a toda esta ayuda e información privilegiada.</p></div>
+          <!-- duplicado para el loop continuo del marquee -->
+          <div class="marquee-card"><p class="marquee-quote">ORO PURO! eternamente agradecida. Bendiciones almas en evolución. Gracias gracias gracias.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">Buenos días, gracias por sus experiencias de vida, bendiciones.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">La Numerología evolutiva de Pilar Fernández García TE CAMBIA LA VIDA PARA SER TU MEJOR VERSIÓN.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">Yo les quiero dar mi testimonio: desde que he comenzado a trabajar en el entendimiento de mi camino, he comenzado a sanar mi cuerpo. Hoy estoy convencida de que voy en el camino correcto.</p></div>
+          <div class="marquee-card"><p class="marquee-quote">Agradezco enormemente ser parte del grupo de Aimée y que he podido tener acceso a toda esta ayuda e información privilegiada.</p></div>
+        </div>
+      </div>
+      <p class="testimonio-note">¿Viviste la Gira México 2026? Escríbenos tu experiencia y la sumamos aquí.</p>
+
+      <div class="social-links-row">
+        <a class="social-pill" href="https://www.instagram.com/tucodigoevolutivo/" target="_blank" rel="noopener">Instagram</a>
+        <a class="social-pill" href="https://www.facebook.com/profile.php?id=61590513938655" target="_blank" rel="noopener">Facebook</a>
+        <a class="social-pill" href="https://www.tiktok.com/@tucodigoevolutivo" target="_blank" rel="noopener">TikTok</a>
+        <a class="social-pill" href="https://www.youtube.com/@TuCodigoEvolutivo" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Tu Código Evolutivo</div>
+    <div class="footer-tagline">Gira México 2026 · Tu Numerología Evolutiva · Bioevolutiva Consciente</div>
+    <div class="footer-links">
+      <a class="footer-link" href="https://www.instagram.com/tucodigoevolutivo/" target="_blank" rel="noopener">Instagram</a>
+      <a class="footer-link" href="https://www.facebook.com/profile.php?id=61590513938655" target="_blank" rel="noopener">Facebook</a>
+      <a class="footer-link" href="https://www.tiktok.com/@tucodigoevolutivo" target="_blank" rel="noopener">TikTok</a>
+      <a class="footer-link" href="https://www.youtube.com/@TuCodigoEvolutivo" target="_blank" rel="noopener">YouTube</a>
+      <a class="footer-link" href="privacidad.html">Privacidad</a>
+      <a class="footer-link" href="mailto:contacto@tucodigoevolutivo.com">Contacto</a>
+    </div>
+    <div class="footer-copy">© 2026 Tu Código Evolutivo · Todos los derechos reservados</div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 60 });
+
+    // Collage — marco digital: 3 fotos visibles, cada una cambia sola por otra de la colección.
+    // Para actualizar las fotos del evento, solo reemplaza los nombres de archivo en este arreglo.
+    (function () {
+      var pool = [
+        'taller-15-agosto.jpg',
+        'taller-22-agosto.jpg',
+        'teotihuacan-ritual.jpg',
+        'charla-cafe-satelite.jpg',
+        'ritual-inicio-trabajos.jpg',
+        'actividad-puebla.jpg',
+        'ritual-inicio-trabajos-puebla.jpg',
+        'equipo.png'
+      ];
+      var slots = document.querySelectorAll('.collage-slot img');
+      if (!slots.length) return;
+      var offsets = [0, Math.floor(pool.length / 3), Math.floor((2 * pool.length) / 3)];
+      var intervals = [4200, 5000, 5800];
+
+      slots.forEach(function (img, i) {
+        var cursor = offsets[i];
+        function tick() {
+          img.style.opacity = '0';
+          setTimeout(function () {
+            cursor = (cursor + 1) % pool.length;
+            img.src = pool[cursor];
+            img.style.opacity = '1';
+          }, 700);
+        }
+        setTimeout(function () {
+          setInterval(tick, intervals[i]);
+        }, i * 900);
+      });
+    })();
+  </script>
+</body>
+</html>
