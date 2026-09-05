@@ -446,32 +446,61 @@
     // Collage — marco digital: 3 fotos visibles, cada una cambia sola por otra de la colección.
     // Para actualizar las fotos del evento, solo reemplaza los nombres de archivo en este arreglo.
     (function () {
-      var pool = [
-        'evento1.jpg', 'evento2.jpg', 'evento3.jpg', 'evento4.jpg',
-        'evento5.jpg', 'evento6.jpg', 'evento7.jpg', 'evento8.jpg',
-        'evento9.jpg', 'evento10.jpg', 'evento11.jpg', 'evento12.jpg',
-        'evento13.jpg', 'evento14.jpg', 'evento15.jpg', 'evento16.jpg'
-      ];
-      var slots = document.querySelectorAll('.collage-slot img');
-      if (!slots.length) return;
-      var offsets = [0, Math.floor(pool.length / 3), Math.floor((2 * pool.length) / 3)];
-      var intervals = [4200, 5000, 5800];
+  var pool = [
+    'evento1.jpg', 'evento2.jpg', 'evento3.jpg', 'evento4.jpg',
+    'evento5.jpg', 'evento6.jpg', 'evento7.jpg', 'evento8.jpg',
+    'evento9.jpg', 'evento10.jpg', 'evento11.jpg', 'evento12.jpg',
+    'evento13.jpg', 'evento14.jpg', 'evento15.jpg', 'evento16.jpg',
+    'evento17.jpg', 'evento18.jpg', 'evento19.jpg', 'evento20.jpg'
+  ];
 
-      slots.forEach(function (img, i) {
-        var cursor = offsets[i];
-        function tick() {
-          img.style.opacity = '0';
-          setTimeout(function () {
-            cursor = (cursor + 1) % pool.length;
-            img.src = pool[cursor];
-            img.style.opacity = '1';
-          }, 700);
-        }
-        setTimeout(function () {
-          setInterval(tick, intervals[i]);
-        }, i * 900);
+  var slots = document.querySelectorAll('.collage-slot img');
+  if (!slots.length) return;
+
+  var intervals = [4200, 5000, 5800];
+
+  function getFotosVisibles() {
+    return Array.from(slots).map(function(img) {
+      return img.getAttribute('src');
+    });
+  }
+
+  slots.forEach(function (img, i) {
+
+    function tick() {
+      var visibles = getFotosVisibles();
+
+      var disponibles = pool.filter(function(foto) {
+        return !visibles.includes(foto);
       });
-    })();
+
+      if (!disponibles.length) return;
+
+      var siguiente =
+        disponibles[Math.floor(Math.random() * disponibles.length)];
+
+      var precarga = new Image();
+      precarga.src = siguiente;
+
+      precarga.onload = function () {
+        img.style.opacity = '0';
+
+        setTimeout(function () {
+          img.src = siguiente;
+          img.style.opacity = '1';
+        }, 500);
+      };
+
+      precarga.onerror = function () {
+        console.warn('No se encontró: ' + siguiente);
+      };
+    }
+
+    setTimeout(function () {
+      setInterval(tick, intervals[i]);
+    }, i * 900);
+  });
+})();
   </script>
 </body>
 </html>
